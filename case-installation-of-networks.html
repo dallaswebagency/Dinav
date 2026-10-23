@@ -1166,8 +1166,178 @@ a.ct-item:hover{border-color:#0560DE;transform:translateX(6px)}
   .cs-hero-in{min-height:460px;gap:48px}
   .pg-hero{padding:56px 0 64px}
 }
-
 .pg-sec img{max-width:100%;height:auto;display:block}
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:9999;background:rgba(6,7,9,.95);display:none;align-items:center;justify-content:center;padding:24px}
+.lb.on{display:flex}
+.lb img{max-width:92vw;max-height:84vh;border-radius:14px;box-shadow:0 40px 120px rgba(0,0,0,.6);object-fit:contain}
+.lb button{position:absolute;width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .25s}
+.lb button:hover{background:#0560DE;border-color:#0560DE}
+.lb .x{top:22px;right:22px}.lb .pv{left:22px;top:50%;margin-top:-26px}.lb .nx{right:22px;top:50%;margin-top:-26px}
+.lbx{cursor:zoom-in}
+/* ---------- case hero ---------- */
+.cx-hero{position:relative;min-height:min(88vh,800px);display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:#0A0A0B;overflow:hidden;isolation:isolate}
+.cx-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:cxzoom 16s ease-out both}
+@keyframes cxzoom{from{transform:scale(1.07)}to{transform:scale(1)}}
+.cx-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,10,11,.78) 0%,rgba(10,10,11,.1) 32%,rgba(10,10,11,.55) 68%,rgba(10,10,11,.92) 100%)}
+.cx-top,.cx-bot{width:100%;box-sizing:border-box}
+.cx-top{padding-top:34px}
+.cx-bot{padding-bottom:150px}
+.cx-bot .pp-h1{max-width:15ch;font-size:clamp(42px,7vw,112px);line-height:.94}
+.cx-kick{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#7DB4FF;margin-bottom:18px}
+.cx-kick::before{content:"";width:30px;height:1.5px;background:#2B8AFF}
+.cx-stat{position:relative;z-index:3;margin-top:-84px}
+.cx-card{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);background:#fff;border:1px solid #E3E5E8;border-radius:30px;overflow:hidden;box-shadow:0 50px 100px rgba(10,10,11,.16)}
+.cx-fig{padding:46px 50px;background:linear-gradient(135deg,#0560DE 0%,#2B8AFF 100%);color:#fff;display:flex;flex-direction:column;justify-content:center;gap:14px;position:relative;overflow:hidden}
+.cx-fig::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;border:1.5px solid rgba(255,255,255,.28);box-shadow:0 0 0 40px rgba(255,255,255,.06)}
+.cx-fig b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(64px,8.6vw,140px);line-height:.85;letter-spacing:-.05em}
+.cx-fig span{font-size:16px;line-height:1.4;opacity:.94;max-width:26ch;position:relative;z-index:1}
+.cx-lead{padding:46px 54px;display:flex;flex-direction:column;justify-content:center;gap:18px}
+.cx-lead .lab{align-self:flex-start}
+.cx-lead p{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(20px,2vw,29px);line-height:1.42;letter-spacing:-.012em;color:#0A0A0B}
+.cx-story{padding:110px 0 90px}
+.cx-sg{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px 90px;align-items:start}
+.cx-brief{position:sticky;top:120px}
+.cx-brief .ib{width:64px;height:64px;border-radius:20px;background:#EAF1FF;color:#0560DE;display:grid;place-items:center;margin-bottom:22px}
+.cx-brief h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(34px,4vw,60px);line-height:1;letter-spacing:-.03em;margin:0 0 22px}
+.cx-brief p{font-size:18px;line-height:1.7;color:#4A4C54;margin:0 0 14px}
+.cx-rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.cx-rel a{padding:9px 16px;border-radius:999px;border:1.5px solid #D5D8DD;font-size:13px;font-weight:600;color:#0A0A0B;transition:.25s}
+.cx-rel a:hover{background:#0560DE;border-color:#0560DE;color:#fff}
+.cx-dh{display:flex;align-items:center;gap:14px;margin-bottom:34px}
+.cx-dh h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(28px,3vw,44px);letter-spacing:-.025em;margin:0}
+.cx-do{list-style:none;margin:0;padding:0;position:relative}
+.cx-do::before{content:"";position:absolute;left:27px;top:30px;bottom:48px;width:2px;background:linear-gradient(#0560DE,#D5D8DD)}
+.cx-do li{position:relative;display:flex;gap:24px;align-items:flex-start;padding:0 0 30px}
+.cx-do .ic{flex:none;width:56px;height:56px;border-radius:50%;background:#fff;border:2px solid #0560DE;color:#0560DE;display:grid;place-items:center;position:relative;z-index:1;transition:background .3s,color .3s}
+.cx-do li:hover .ic{background:#0560DE;color:#fff}
+.cx-do p{margin:0;padding-top:13px;font-size:19px;line-height:1.5;font-weight:500;color:#1A1B1F}
+.cx-gal{padding:20px 0 120px}
+.cx-gh{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:36px;flex-wrap:wrap}
+.cx-gh p{margin:0;color:#6A6D76;font-size:15px}
+.cx-mos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:clamp(150px,17vw,250px);gap:14px}
+.cx-mos figure{margin:0;border-radius:22px;overflow:hidden;position:relative;background:#E6E8EC}
+.cx-mos img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.cx-mos figure:hover img{transform:scale(1.06)}
+.cx-mos figure::after{content:"+";position:absolute;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;background:#fff;color:#0560DE;display:grid;place-items:center;font-size:24px;line-height:1;opacity:0;transform:scale(.7);transition:.3s}
+.cx-mos figure:hover::after{opacity:1;transform:none}
+/* ---------- solutions: shared ---------- */
+.sx-split{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px 60px;align-items:center}
+.sx-vis{position:relative}
+.sx-wire{fill:none;stroke:#2B8AFF;stroke-width:1.6;stroke-dasharray:4 7;animation:sxwire 1.4s linear infinite;opacity:.85}
+@keyframes sxwire{to{stroke-dashoffset:-22}}
+.sx-node-ring{animation:sxpulse 3.2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes sxpulse{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.9;transform:scale(1.12)}}
+.sx-h{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.sx-h p{max-width:420px;margin:0;color:#4A4C54;font-size:17px;line-height:1.6}
+.sx-photos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:start}
+.sx-photos figure{margin:0;border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:#E6E8EC}
+.sx-photos figure:nth-child(even){margin-top:46px}
+.sx-photos img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.sx-photos figure:hover img{transform:scale(1.07)}
+.sx-photos.n2{grid-template-columns:repeat(2,minmax(0,1fr))}.sx-photos.n2 figure{aspect-ratio:4/3}
+/* IT layers */
+.it-layers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.it-l{background:#fff;border:1px solid #E0E2E6;border-radius:26px;padding:34px 32px 18px;position:relative;overflow:hidden}
+.it-l::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,#0560DE,#2B8AFF)}
+.it-l h3{display:flex;align-items:center;gap:14px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;letter-spacing:-.02em;margin:0 0 8px}
+.it-l>p{margin:0 0 20px;color:#6A6D76;font-size:14px}
+.it-l ul{list-style:none;margin:0;padding:0}
+.it-l li{display:flex;gap:14px;padding:18px 0;border-top:1px solid #ECEEF1}
+.it-l li .sv-ico{width:42px;height:42px;border-radius:12px;flex:none}
+.it-l li b{display:block;font-size:16px;line-height:1.3;margin-bottom:4px;font-weight:700}
+.it-l li span{font-size:14px;color:#5A5D66;line-height:1.5}
+/* AV */
+.av-cols{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,3fr) minmax(0,3fr);gap:40px 48px;align-items:start}
+.av-cols p{margin:0;color:#4A4C54;font-size:16px;line-height:1.75}
+.av-cols p:first-child{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:clamp(21px,2.2vw,30px);line-height:1.4;color:#0A0A0B;letter-spacing:-.012em}
+.av-stage{background:#0A0A0B;color:#fff;padding:110px 0 100px;position:relative;overflow:hidden}
+.av-stage::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 28%,rgba(5,96,222,.38),transparent 72%)}
+.av-stage .wrap{position:relative}
+.av-screen{max-width:1080px;margin:0 auto;border-radius:24px;padding:12px;background:linear-gradient(145deg,#1d2028,#0c0d11);box-shadow:0 0 0 1px rgba(255,255,255,.09),0 70px 150px rgba(5,96,222,.4)}
+.av-view{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000}
+.av-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s}
+.av-slide.on{opacity:1}
+.av-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.av-view::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 3px);mix-blend-mode:overlay}
+.av-foot{width:200px;height:16px;margin:0 auto;background:linear-gradient(#262a33,#0c0d11);border-radius:0 0 14px 14px}
+.av-ths{display:flex;gap:12px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+.av-th{width:116px;aspect-ratio:16/10;border-radius:10px;overflow:hidden;border:2px solid transparent;opacity:.5;padding:0;background:#000;cursor:pointer;transition:.3s}
+.av-th img{width:100%;height:100%;object-fit:cover;display:block}
+.av-th.on,.av-th:hover{opacity:1;border-color:#2B8AFF}
+.av-spec{border-top:1.5px solid #0A0A0B}
+.av-spec article{display:grid;grid-template-columns:64px minmax(0,4fr) minmax(0,5fr);gap:18px 34px;align-items:center;padding:30px 12px;border-bottom:1px solid #E3E5E8;position:relative;transition:background .3s,padding .35s}
+.av-spec article::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:#0560DE;transition:width .3s}
+.av-spec article:hover{background:#F5F8FF;padding-left:30px}
+.av-spec article:hover::before{width:5px}
+.av-spec h3{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,30px);letter-spacing:-.02em;line-height:1.15}
+.av-spec p{margin:0;color:#5A5D66;font-size:16px;line-height:1.55}
+/* Fit-out */
+.ft-stack{position:relative;height:440px}
+.ft-stack figure{position:absolute;margin:0;border-radius:22px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.45);border:4px solid rgba(255,255,255,.12)}
+.ft-stack figure img{width:100%;height:100%;object-fit:cover}
+.ft-stack figure:nth-child(1){width:68%;height:300px;left:0;top:0;transform:rotate(-3deg)}
+.ft-stack figure:nth-child(2){width:62%;height:270px;right:0;bottom:0;transform:rotate(3deg)}
+.ft-keys{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:44px}
+.ft-key{padding:28px 22px 26px;border-radius:22px;background:#fff;border:1px solid #E0E2E6;display:flex;flex-direction:column;gap:16px;transition:transform .45s,box-shadow .35s,border-color .3s}
+.ft-key:hover{transform:translateY(-6px);border-color:#0560DE;box-shadow:0 26px 50px rgba(5,96,222,.14)}
+.ft-key b{font-size:16px;line-height:1.35;font-weight:700}
+.ft-quote{margin-top:44px;border-radius:30px;padding:48px 56px;background:linear-gradient(135deg,#0560DE,#2B8AFF);color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:clamp(22px,2.5vw,36px);line-height:1.3;letter-spacing:-.02em}
+.ft-row{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px 80px;align-items:center;margin-bottom:90px}
+.ft-row:nth-child(even){grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.ft-row:nth-child(even) figure{order:2}
+.ft-row figure{margin:0;border-radius:28px;overflow:hidden;aspect-ratio:4/3;background:#E6E8EC;box-shadow:0 40px 80px rgba(10,10,11,.12)}
+.ft-row figure img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.ft-row figure:hover img{transform:scale(1.05)}
+.ft-pt{display:flex;gap:18px;align-items:flex-start;padding:22px 0;border-top:1px solid #E3E5E8}
+.ft-pt:first-child{border-top:0;padding-top:0}
+.ft-pt .sv-ico{flex:none}
+.ft-pt h3{margin:0 0 6px;font-size:21px;font-weight:700;letter-spacing:-.01em}
+.ft-pt p{margin:0;color:#5A5D66;font-size:15.5px;line-height:1.55}
+/* People flow */
+.pf-journey{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;position:relative}
+.pf-step{padding:44px 38px 40px;position:relative;background:#fff;border:1px solid #E0E2E6;display:flex;flex-direction:column;gap:18px}
+.pf-step:nth-child(1){border-radius:30px 0 0 30px}.pf-step:nth-child(3){border-radius:0 30px 30px 0}
+.pf-step+.pf-step{border-left:0}
+.pf-step .big{width:76px;height:76px;border-radius:24px;background:#EAF1FF;color:#0560DE;display:grid;place-items:center}
+.pf-step h3{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(28px,3vw,42px);letter-spacing:-.03em;margin:0}
+.pf-step p{margin:0;color:#4A4C54;font-size:16.5px;line-height:1.65}
+.pf-step .arr{position:absolute;right:-22px;top:50%;margin-top:-22px;width:44px;height:44px;border-radius:50%;background:#0560DE;color:#fff;display:grid;place-items:center;z-index:2;box-shadow:0 10px 24px rgba(5,96,222,.4)}
+.pf-step:last-child .arr{display:none}
+.pf-dot{fill:#2B8AFF}
+/* responsive */
+@media (max-width:1000px){
+ .cx-card,.cx-sg,.sx-split,.pf-journey,.ft-row,.ft-row:nth-child(even){grid-template-columns:minmax(0,1fr)}
+ .cx-brief{position:static}
+ .cx-bot{padding-bottom:130px}
+ .cx-fig,.cx-lead{padding:34px 30px}
+ .it-layers{grid-template-columns:minmax(0,1fr)}
+ .av-cols{grid-template-columns:minmax(0,1fr)}
+ .av-spec article{grid-template-columns:56px minmax(0,1fr)}
+ .av-spec article p{grid-column:2}
+ .ft-keys{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .ft-row:nth-child(even) figure{order:0}
+ .ft-stack{height:380px}
+ .pf-step,.pf-step:nth-child(1),.pf-step:nth-child(3){border-radius:0;border-left:1px solid #E0E2E6}
+ .pf-step:nth-child(1){border-radius:26px 26px 0 0}.pf-step:nth-child(3){border-radius:0 0 26px 26px}
+ .pf-step+.pf-step{border-top:0}
+ .pf-step .arr{right:auto;left:50%;top:auto;bottom:-22px;margin:0 0 0 -22px;transform:rotate(90deg)}
+ .sx-photos{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .sx-vis{max-width:520px}
+}
+@media (max-width:700px){
+ .cx-mos{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:42vw}
+ .cx-mos figure{grid-column:span 1!important;grid-row:span 1!important}
+ .cx-mos figure:first-child{grid-column:span 2!important;grid-row:span 2!important}
+ .cx-story{padding:80px 0 50px}
+ .cx-quote,.ft-quote{padding:32px 26px}
+ .ft-keys{grid-template-columns:minmax(0,1fr)}
+ .sx-photos figure:nth-child(even){margin-top:24px}
+ .av-th{width:84px}
+ .ft-stack{height:320px}
+ .cx-do p{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){.cx-hero>img,.sx-wire,.sx-node-ring{animation:none}.av-slide{transition:none}}
 </style>
 
 </head>
@@ -1303,22 +1473,36 @@ a.ct-item:hover{border-color:#0560DE;transform:translateX(6px)}
     </div>
   </header>
 
-  <section class="cs-hero" aria-label="Case study introduction">
-    <img src="assets/img/2022-11-Redes_dinav_-02-980x562.webp" alt="Installation of networks" loading="eager" decoding="async" onerror="this.style.display='none'">
-    <div class="wrap cs-hero-in">
-      <nav class="pp-crumb mono" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="success-stories.html">Success stories</a><span>/</span><b>Installation of networks</b></nav>
-      <div><span class="pg-kick mono" style="margin-top:0">Business success story</span><h1 class="pp-h1" style="margin-top:14px">Installation of networks</h1><div class="cs-tags"><a href="it-networking.html">IT and Networking Solutions</a><a href="audiovisual.html">Audiovisual Systems</a></div></div>
+  <section class="cx-hero" aria-label="Case study introduction">
+    <img src="assets/img/2022-11-Redes_dinav_-02.webp" alt="Installation of networks" loading="eager" decoding="async" onerror="this.style.display='none'">
+    <div class="wrap cx-top"><nav class="pp-crumb mono" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><a href="success-stories.html">Success stories</a><span>/</span><b>Installation of networks</b></nav></div>
+    <div class="wrap cx-bot"><span class="cx-kick mono">Business success story</span><h1 class="pp-h1">Installation of networks</h1></div>
+  </section>
+  <section class="cx-stat" aria-label="At a glance">
+    <div class="wrap"><div class="cx-card reveal">
+      <div class="cx-fig"><b>20</b><span>Primark shops in France with voice-IP networks, cabling and UPS</span></div>
+      <div class="cx-lead"><span class="lab mono">The project</span><p>A computer network is a set of computers or devices that are interconnected through cables, signals and waves in order to share information (files, images, tables, documents, etc.), resources (printers, recorders, players, loudspeakers, etc.) and actions (Internet access, common server, e-mail, chat, etc.).</p></div>
+    </div></div>
+  </section>
+  <section class="cx-story" aria-label="Scope of work">
+    <div class="wrap cx-sg">
+      <div class="cx-brief reveal">
+        <span class="ib"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+        <h2>The work</h2>
+        <p>A computer network is a set of computers or devices that are interconnected through cables, signals and waves in order to share information (files, images, tables, documents, etc.), resources (printers, recorders, players, loudspeakers, etc.) and actions (Internet access, common server, e-mail, chat, etc.).</p>
+        <div class="cx-rel"><a href="it-networking.html">IT and Networking Solutions</a><a href="audiovisual.html">Audiovisual Systems</a></div>
+      </div>
+      <div>
+        <div class="cx-dh reveal"><span class="sv-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 005 5L21 12.6 12.6 21 3 11.4 11.4 3z"/></svg></span><h2>Examples of our installations are</h2></div>
+        <ul class="cx-do"><li class="reveal"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><p>Installation of voice-IP networks, cabling, switchboard, UPS for the company VOCOVO, in all Primark shops in France (20 shops).</p></li><li class="reveal"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg></span><p>Fitting out and installation of communicator charging stations.</p></li><li class="reveal"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><p>Installation of voice-IP networks, cabling, switchboard, UPS at SANOFI PASTEUR MSD.</p></li></ul>
+      </div>
     </div>
   </section>
-  <section class="pg-sec" aria-label="Project">
-    <div class="wrap cs-body">
-      <div class="reveal"><p class="cs-lead">A computer network is a set of computers or devices that are interconnected through cables, signals and waves in order to share information (files, images, tables, documents, etc.), resources (printers, recorders, players, loudspeakers, etc.) and actions (Internet access, common server, e-mail, chat, etc.).</p></div>
-      <aside class="cs-did reveal"><span class="lab mono">Scope</span><h2>Examples of our installations are</h2><ul><li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 12.5l3 3 5-6"></path></svg><span>Installation of voice-IP networks, cabling, switchboard, UPS for the company VOCOVO, in all Primark shops in France (20 shops).</span></li><li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 12.5l3 3 5-6"></path></svg><span>Fitting out and installation of communicator charging stations.</span></li><li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 12.5l3 3 5-6"></path></svg><span>Installation of voice-IP networks, cabling, switchboard, UPS at SANOFI PASTEUR MSD.</span></li></ul></aside>
+  <section class="cx-gal" aria-label="Gallery">
+    <div class="wrap">
+      <div class="cx-gh reveal"><div><span class="lab mono">Gallery</span><h2 class="h2" style="margin-top:18px;font-size:clamp(34px,4.4vw,66px)">The project in pictures.</h2></div><p>Click any photo to view it full size.</p></div>
+      <div class="cx-mos"><figure class="lbx reveal" style="grid-column:span 3;grid-row:span 2"><img src="assets/img/2022-11-Redes_dinav_-02-1.webp" alt="Installation of networks photo 1" loading="lazy" decoding="async" onerror="this.onerror=function(){this.style.display='none'};this.src='assets/img/2022-11-Redes_dinav_-02-1.webp'"></figure><figure class="lbx reveal" style="grid-column:span 3;grid-row:span 2"><img src="assets/img/2022-11-Redes_dinav-2-2.webp" alt="Installation of networks photo 2" loading="lazy" decoding="async" onerror="this.onerror=function(){this.style.display='none'};this.src='assets/img/2022-11-Redes_dinav-2-2.webp'"></figure></div>
     </div>
-  </section>
-  <section class="pg-sec pg-grey" aria-label="Gallery">
-    <div class="wrap"><div class="pg-ph reveal"><div><span class="lab mono">Gallery</span><h2 class="h2" style="margin-top:18px;font-size:clamp(34px,4.4vw,66px)">The project in pictures.</h2></div></div>
-    <div class="cs-gal few"><figure class="reveal"><img src="assets/img/2022-11-Redes_dinav_-02-1-400x284.webp" alt="Installation of networks photo 1" loading="lazy" decoding="async" onerror="this.style.display='none'"></figure><figure class="reveal"><img src="assets/img/2022-11-Redes_dinav-2-2-400x284.webp" alt="Installation of networks photo 2" loading="lazy" decoding="async" onerror="this.style.display='none'"></figure></div></div>
   </section>
   <nav class="cs-next" aria-label="More stories"><a href="case-barcelona-airport.html"><span class="mono">&larr; PREVIOUS STORY</span><b>People flow management Barcelona Airport</b></a><a href="case-private-jet.html"><span class="mono">NEXT STORY &rarr;</span><b>Private Jet merchandising</b></a></nav>
   <section class="sv-cta" aria-label="Contact">
@@ -1510,5 +1694,18 @@ if (tc) {
     Object.keys(map).forEach(function(id){io.observe(document.getElementById(id));});
   }
 })();
+</script>
+<script>
+(function(){var f=[].slice.call(document.querySelectorAll('.lbx'));if(!f.length)return;var i=0;
+var o=document.createElement('div');o.className='lb';o.setAttribute('role','dialog');o.setAttribute('aria-label','Image viewer');
+o.innerHTML='<button class="x" aria-label="Close"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l12 12M16 4L4 16"/></svg></button><button class="pv" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 9H3M8 4L3 9l5 5"/></svg></button><img alt=""><button class="nx" aria-label="Next"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9h12M10 4l5 5-5 5"/></svg></button>';
+document.body.appendChild(o);var im=o.querySelector('img');
+function show(n){i=(n+f.length)%f.length;var s=f[i].querySelector('img');im.src=s.currentSrc||s.src;im.alt=s.alt}
+function open(n){show(n);o.classList.add('on');document.body.style.overflow='hidden'}
+function close(){o.classList.remove('on');document.body.style.overflow=''}
+f.forEach(function(e,n){e.addEventListener('click',function(){open(n)})});
+o.querySelector('.x').onclick=close;o.querySelector('.pv').onclick=function(e){e.stopPropagation();show(i-1)};o.querySelector('.nx').onclick=function(e){e.stopPropagation();show(i+1)};
+o.addEventListener('click',function(e){if(e.target===o)close()});
+document.addEventListener('keydown',function(e){if(!o.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});})();
 </script>
 </body></html>
