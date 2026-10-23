@@ -1,0 +1,19 @@
+name: optimize-images
+on:
+  push:
+    paths: ['scripts/optimize.py']
+permissions:
+  contents: write
+jobs:
+  go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pillow
+      - run: python3 scripts/optimize.py
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Optimize images to webp [skip ci]"
+          git push
