@@ -1323,7 +1323,7 @@ a.ct-item:hover{border-color:#0560DE;transform:translateX(6px)}
           <span class="lab mono">UK office (Dinav UK Solutions)</span>
           <div class="ct-item"><span class="sv-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><small class="mono">Address</small><b>Unit 18, Gunnels Wood Park, Gunnels Wood Road<br>Stevenage SG1 2BH, United Kingdom</b></div></div>
           <div class="ct-item"><span class="sv-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></span><div><small class="mono">Telephone</small><b>(+44) 7538 275533</b></div></a>
-          <div class="ct-item"><span class="sv-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><small class="mono">Email</small><b class="ct-tbc">UK email to be confirmed</b></div></div>
+          <a class="ct-item" href="mailto:richard.plaskow@dinav-uk.com"><span class="sv-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><small class="mono">Email</small><b style="font-size:clamp(17px,1.6vw,22px);word-break:break-all">richard.plaskow@dinav-uk.com</b></div></a>
         </div>
       </div>
       <form class="ct-form reveal" id="ctForm" novalidate>
@@ -1554,8 +1554,8 @@ if (tc) {
 .ct-form select{font:inherit;font-size:16px;padding:15px 16px;border-radius:14px;border:1.5px solid #D5D8DD;background:#F7F8F9;color:#0A0A0B;width:100%}.ct-form select:focus{outline:none;border-color:#0560DE;background:#fff}</style>
 <script>
 (function(){var f=document.getElementById('ctForm');if(!f)return;var n=document.getElementById('ctNote');
-/* Routing: set the UK address here once confirmed. Until then UK enquiries are sent to the Madrid inbox, tagged [UK]. */
-var OFFICES={madrid:{to:'info@dinav.net',tag:'Madrid office (Europe)'},uk:{to:'info@dinav.net',tag:'UK office'}};
+/* Routing: set the UK address here once confirmed.  */
+var OFFICES={madrid:{to:'info@dinav.net',tag:'Madrid office (Europe)'},uk:{to:'richard.plaskow@dinav-uk.com',tag:'UK office'}};
 f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f);var o=OFFICES[d.get('office')];
 if(!o||!d.get('name')||!d.get('email')||!d.get('message')||!d.get('consent')){n.textContent='Please choose an office, complete name, email and message, and accept the privacy policy.';return;}
 var body='Office: '+o.tag+'\nName: '+d.get('name')+'\nEmail: '+d.get('email')+'\nPhone: '+(d.get('phone')||'')+'\n\n'+d.get('message');
