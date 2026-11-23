@@ -735,36 +735,9 @@ h1,h2,h3,.disp,.h-h1,.pp-h1,.h2,.mani-text,.sv-card h3,.sv-cta h2,.pg-kick{font-
     </div>
 
     <div class="h-stats fadeup" style="animation-delay:1.1s">
-      <div><span class="stat"><span class="odo" role="img" aria-label="20"><span class="odo-col" style="--d:2;animation-delay:0.00s">0
-1
-2
-3
-4
-5
-6
-7
-8
-9</span><span class="odo-col" style="--d:0;animation-delay:0.18s">0
-1
-2
-3
-4
-5
-6
-7
-8
-9</span></span></span><span class="stat-lab">years of<br>experience</span></div>
-      <div><span class="stat" style="align-items:center">27</span><span class="stat-lab">countries across<br>Europe and the UK</span></div>
-      <div><span class="stat"><span class="odo" role="img" aria-label="4"><span class="odo-col" style="--d:4;animation-delay:0.00s">0
-1
-2
-3
-4
-5
-6
-7
-8
-9</span></span></span><span class="stat-lab">solution areas,<br>one partner</span></div>
+      <div><span class="stat" data-count="20" aria-label="20" style="align-items:center;font-variant-numeric:tabular-nums">20</span><span class="stat-lab">years of<br>experience</span></div>
+      <div><span class="stat" data-count="27" aria-label="27" style="align-items:center;font-variant-numeric:tabular-nums">27</span><span class="stat-lab">countries across<br>Europe and the UK</span></div>
+      <div><span class="stat" data-count="4" aria-label="4" style="align-items:center;font-variant-numeric:tabular-nums">4</span><span class="stat-lab">solution areas,<br>one partner</span></div>
     </div>
     <span class="h-cue mono" aria-hidden="true"><i></i>Scroll</span>
   </section>
@@ -1203,4 +1176,12 @@ if (tc) {
 </script>
 
 
+<script>
+(function(){var els=document.querySelectorAll('.h-stats [data-count]');if(!els.length)return;
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(reduce)return;
+els.forEach(function(e){e.style.minWidth=(String(e.dataset.count).length)+'ch';e.textContent='0'});
+function run(){els.forEach(function(e,k){var to=+e.dataset.count,dur=2000,t0=null,delay=k*220;
+function step(t){if(t0===null)t0=t+delay;var p=Math.min(Math.max((t-t0)/dur,0),1),v=1-Math.pow(1-p,3);e.textContent=Math.round(v*to);if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)})}
+setTimeout(run,1100)})();
+</script>
 </body></html>
