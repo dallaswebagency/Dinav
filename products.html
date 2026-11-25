@@ -784,6 +784,33 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
 .pp-pill:not(:has(i)){padding-left:22px!important}
 @media(max-width:700px){.pp-sub-in{justify-content:flex-start;padding-left:16px;padding-right:16px}.pp-pill{padding:9px 16px 9px 10px!important;font-size:14px!important}.pp-pill i{width:28px;height:28px}}
 </style>
+<style id="rg-css">
+.rg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:52px}
+.rg{position:relative;overflow:hidden;border-radius:28px;padding:38px 40px 36px;display:flex;flex-direction:column;gap:22px;min-height:440px}
+.rg-light{background:#F1F2F4;color:#0A0A0B;border:1px solid #E3E5E9}
+.rg-dark{background:radial-gradient(80% 90% at 100% 0,rgba(5,96,222,.38),transparent 60%),#0A0B0F;color:#fff}
+.rg-top{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.rg-tag{font-size:12px;letter-spacing:.16em;padding:7px 12px;border-radius:999px;border:1px solid currentColor;color:#0560DE}
+.rg-dark .rg-tag{color:#7DB4FF}
+.rg-t{font-size:15px;font-weight:600;opacity:.75}
+.rg-spec{display:flex;align-items:center;gap:18px}
+.rg-spec b{font-family:'IBM Plex Sans',sans-serif;font-weight:600;font-size:clamp(34px,3.6vw,54px);letter-spacing:-.03em;line-height:1}
+.rg-spec i{flex:1;height:2px;background:linear-gradient(90deg,#0560DE,#2B8AFF);position:relative;border-radius:2px;min-width:30px}
+.rg-spec i::after{content:"";position:absolute;right:-1px;top:-4px;width:10px;height:10px;border-top:2px solid #2B8AFF;border-right:2px solid #2B8AFF;transform:rotate(45deg)}
+.rg-vis{flex:1;display:flex;align-items:flex-end;min-height:130px}
+.rg-screens{position:relative;gap:12px;align-items:flex-end}
+.rg-screens span{flex:none;width:var(--s);max-width:100%;display:block;border-radius:6px;border:1.5px solid #0560DE;background:rgba(5,96,222,.07);aspect-ratio:16/9;height:auto}
+.rg-screens span{width:calc(var(--s) * .27);min-width:0}
+.rg-screens span:last-child{background:rgba(5,96,222,.16)}
+.rg-dots{gap:28px;align-items:flex-end}
+.rg-dots span{flex:1;aspect-ratio:1/1;max-height:150px;border-radius:14px;border:1px solid rgba(255,255,255,.16);background-color:rgba(255,255,255,.04)}
+.rg-dots .d1{background-image:radial-gradient(circle,#7DB4FF 1.1px,transparent 1.6px);background-size:6px 6px}
+.rg-dots .d2{background-image:radial-gradient(circle,#7DB4FF 2.2px,transparent 2.8px);background-size:14px 14px}
+.rg-dots .d3{background-image:radial-gradient(circle,#7DB4FF 4px,transparent 4.6px);background-size:26px 26px}
+.rg-ends{display:flex;justify-content:space-between;font-size:11.5px;letter-spacing:.16em;font-family:'IBM Plex Sans',sans-serif;font-weight:500;opacity:.6;border-top:1px solid currentColor;padding-top:12px;border-color:rgba(127,127,127,.35)}
+.rg p{font-size:16px;line-height:1.55;max-width:46ch;opacity:.82}
+@media(max-width:900px){.rg-grid{grid-template-columns:1fr}.rg{padding:30px 26px;min-height:0}}
+</style>
 </head>
 <body>
 
@@ -1036,21 +1063,21 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
         <span class="lab mono">At a glance</span>
         <h2 class="h2" style="margin-top:18px">Two ranges worth knowing.</h2>
       </div>
-      <div class="pp-ruler-grid">
-        <div class="pp-r reveal">
-          <span class="pp-tag mono" style="color:#0560DE">WAFER SCREENS</span>
-          <h3>Screen size</h3>
-          <div class="pp-r-bar"><i style="left:4%"></i></div>
-          <div class="pp-r-ends"><span>5.5&Prime;<small>SMALLEST</small></span><span>85&Prime;<small>LARGEST</small></span></div>
+      <div class="rg-grid">
+        <article class="rg rg-light reveal">
+          <div class="rg-top"><span class="rg-tag mono">WAFER SCREENS</span><span class="rg-t">Screen size</span></div>
+          <div class="rg-spec"><b>5.5&Prime;</b><i aria-hidden="true"></i><b>85&Prime;</b></div>
+          <div class="rg-vis rg-screens" aria-hidden="true"><span style="--s:22%"></span><span style="--s:38%"></span><span style="--s:56%"></span><span style="--s:78%"></span><span style="--s:100%"></span></div>
+          <div class="rg-ends"><span>SMALLEST</span><span>LARGEST</span></div>
           <p>Customisable, indoors and outdoors.</p>
-        </div>
-        <div class="pp-r reveal">
-          <span class="pp-tag mono" style="color:#0560DE">OUTDOOR LED</span>
-          <h3>Pixel pitch</h3>
-          <div class="pp-r-bar"><i style="left:96%"></i></div>
-          <div class="pp-r-ends"><span>P1.5<small>MM, FINEST</small></span><span>P16<small>MM, WIDEST</small></span></div>
+        </article>
+        <article class="rg rg-dark reveal">
+          <div class="rg-top"><span class="rg-tag mono">OUTDOOR LED</span><span class="rg-t">Pixel pitch</span></div>
+          <div class="rg-spec"><b>P1.5</b><i aria-hidden="true"></i><b>P16</b></div>
+          <div class="rg-vis rg-dots" aria-hidden="true"><span class="d1"></span><span class="d2"></span><span class="d3"></span></div>
+          <div class="rg-ends"><span>MM, FINEST</span><span>MM, WIDEST</span></div>
           <p>A smaller pitch suits closer viewing, a larger pitch suits distance. We help you pick.</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -1297,15 +1324,24 @@ if (tc) {
     n.addEventListener('click',function(){r.scrollBy({left:step(),behavior:'smooth'});});
     r.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
     (function(){var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(reduce)return;
-      var paused=false,visible=false,t=null;
-      function tick(){if(paused||!visible)return;var end=r.scrollLeft+r.clientWidth>=r.scrollWidth-6;if(end){r.scrollTo({left:0,behavior:'smooth'});}else{r.scrollBy({left:step(),behavior:'smooth'});}}
-      function start(){if(!t)t=setInterval(tick,3800);}
-      ['mouseenter','focusin','touchstart','pointerdown'].forEach(function(e){r.addEventListener(e,function(){paused=true;},{passive:true});});
-      ['mouseleave','focusout'].forEach(function(e){r.addEventListener(e,function(){paused=false;});});
-      r.addEventListener('touchend',function(){setTimeout(function(){paused=false;},4000);},{passive:true});
-      [p,n].forEach(function(b){b.addEventListener('click',function(){paused=true;setTimeout(function(){paused=false;},6000);});});
+      var SPEED=26,paused=false,visible=false,pos=r.scrollLeft,last=0,wait=0,returning=false,hold=null;
+      r.style.scrollSnapType='none';
+      function pause(ms){paused=true;clearTimeout(hold);if(ms)hold=setTimeout(function(){paused=false;pos=r.scrollLeft;},ms);}
+      function frame(t){var dt=last?Math.min(t-last,64):16;last=t;
+        if(!paused&&visible&&!returning){
+          if(Math.abs(r.scrollLeft-pos)>2)pos=r.scrollLeft;
+          var max=r.scrollWidth-r.clientWidth;
+          if(pos>=max-1){if(wait<=0)wait=1800;wait-=dt;if(wait<=0){returning=true;r.style.scrollBehavior='smooth';r.scrollLeft=0;setTimeout(function(){r.style.scrollBehavior='';pos=0;returning=false;wait=1200;},1400);}}
+          else{pos=Math.min(pos+SPEED*dt/1000,max);r.scrollLeft=pos;}
+        }
+        requestAnimationFrame(frame);}
+      ['mouseenter','focusin'].forEach(function(e){r.addEventListener(e,function(){pause(0);});});
+      ['mouseleave','focusout'].forEach(function(e){r.addEventListener(e,function(){pause(600);});});
+      ['touchstart','pointerdown','wheel'].forEach(function(e){r.addEventListener(e,function(){pause(0);},{passive:true});});
+      r.addEventListener('touchend',function(){pause(4000);},{passive:true});
+      [p,n].forEach(function(b){b.addEventListener('click',function(){pause(6000);});});
       if('IntersectionObserver' in window){new IntersectionObserver(function(en){visible=en[0].isIntersecting;},{threshold:.35}).observe(r);}else{visible=true;}
-      start();})();
+      requestAnimationFrame(frame);})();
     r.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();n.click();}if(e.key==='ArrowLeft'){e.preventDefault();p.click();}});
   }
   var pills=[].slice.call(document.querySelectorAll('.pp-pill[data-spy]'));
