@@ -1297,15 +1297,7 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
                   <svg class="marrow" width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 11h14M12 5l6 6-6 6"></path></svg>
                 </a>
               </div>
-              <a class="mfeature" href="success-stories.html">
-                <img src="assets/img-06.jpg" alt="">
-                <span class="mfeature-shade"></span>
-                <span style="position:relative;display:flex;flex-direction:column;gap:8px;padding:26px">
-                  <span class="mono" style="font-size:12px;letter-spacing:.16em;color:#7DB4FF">FEATURED</span>
-                  <span class="disp" style="font-weight:700;font-size:26px;letter-spacing:-.02em;line-height:1.15">Primark, Gran Via</span>
-                  <span class="mgo" style="color:#fff">See the success stories <svg width="14" height="14" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></span>
-                </span>
-              </a>
+              <div style="display:flex;flex-direction:column;gap:16px;min-height:300px"><a class="mfeature" href="case-primark-queue-management.html" style="min-height:0;flex:1"><img src="assets/img-16.jpg" alt=""><span class="mfeature-shade"></span><span style="position:relative;display:flex;flex-direction:column;gap:6px;padding:20px 22px"><span class="mono" style="font-size:11px;letter-spacing:.16em;color:#7DB4FF">SUCCESS STORY</span><span class="disp" style="font-weight:700;font-size:22px;letter-spacing:-.02em;line-height:1.15">Primark, checkout systems</span></span></a><a class="mfeature" href="success-stories.html" style="min-height:0;flex:1"><img src="assets/img-06.jpg" alt=""><span class="mfeature-shade"></span><span style="position:relative;display:flex;flex-direction:column;gap:6px;padding:20px 22px"><span class="mono" style="font-size:11px;letter-spacing:.16em;color:#7DB4FF">SUCCESS STORY</span><span class="disp" style="font-weight:700;font-size:22px;letter-spacing:-.02em;line-height:1.15">Primark, Gran Via</span></span></a></div>
             </div>
           </div>
         </div>
@@ -1329,6 +1321,8 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
         <span class="mono mm-label">Company</span>
         <a class="dd-item" href="about.html">About us</a>
         <a class="dd-item" href="success-stories.html">Business Success Stories</a>
+        <a class="dd-item" href="case-primark-queue-management.html" style="padding-left:18px;font-size:.92em;opacity:.8">Primark, checkout systems</a>
+        <a class="dd-item" href="success-stories.html" style="padding-left:18px;font-size:.92em;opacity:.8">Primark, Gran Via</a>
         <a class="dd-item" href="clients-partners.html">Partners and Clients</a>
         <a class="btn btn-blue mag" href="contact.html" style="margin-top:18px">Contact us <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></a>
       </nav>
@@ -1465,7 +1459,7 @@ if (fine && !rm) {
   root.appendChild(dot); root.appendChild(ring);
   var mx = 0, my = 0, rx = 0, ry = 0, shown = false;
   window.addEventListener('mousemove', function (e) {
-    mx = e.clientX; my = e.clientY;
+    var z = parseFloat(getComputedStyle(document.documentElement).zoom) || 1; mx = e.clientX / z; my = e.clientY / z;
     if (!shown) { shown = true; rx = mx; ry = my; dot.style.opacity = 1; ring.style.opacity = 1; }
     dot.style.transform = 'translate(' + mx + 'px,' + my + 'px)';
     var t = e.target && e.target.closest ? e.target.closest('a,button,.logo-tile,.st-item') : null;
