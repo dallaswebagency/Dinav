@@ -1693,7 +1693,23 @@ if (tc) {
 (function(){var t=[].slice.call(document.querySelectorAll('.avx-tab')),p=[].slice.call(document.querySelectorAll('.avx-panel'));
 t.forEach(function(b,i){b.addEventListener('click',function(){t.forEach(function(x,k){x.classList.toggle('on',k===i);x.setAttribute('aria-selected',k===i)});p.forEach(function(x,k){x.classList.toggle('on',k===i)})})});
 var tr=document.getElementById('avTrack');if(tr){var st=function(d){var f=tr.querySelector('figure');tr.scrollBy({left:d*(f.offsetWidth+22),behavior:'smooth'})};
-document.getElementById('avPrev').onclick=function(){st(-1)};document.getElementById('avNext').onclick=function(){st(1)};}})();
+document.getElementById('avPrev').onclick=function(){st(-1)};document.getElementById('avNext').onclick=function(){st(1)};
+var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduce){var r=tr,SPEED=34,paused=false,visible=false,pos=r.scrollLeft,last=0,wait=0,returning=false,hold=null;r.style.scrollSnapType='none';
+function pause(ms){paused=true;clearTimeout(hold);if(ms)hold=setTimeout(function(){paused=false;pos=r.scrollLeft;},ms);}
+function frame(t){var dt=last?Math.min(t-last,64):16;last=t;
+if(!paused&&visible&&!returning){if(Math.abs(r.scrollLeft-pos)>2)pos=r.scrollLeft;var max=r.scrollWidth-r.clientWidth;
+if(pos>=max-1){if(wait<=0)wait=1800;wait-=dt;if(wait<=0){returning=true;r.style.scrollBehavior='smooth';r.scrollLeft=0;setTimeout(function(){r.style.scrollBehavior='';pos=0;returning=false;wait=1200;},1600);}}
+else{pos=Math.min(pos+SPEED*dt/1000,max);r.scrollLeft=pos;}}
+requestAnimationFrame(frame);}
+['mouseenter','focusin'].forEach(function(e){r.addEventListener(e,function(){pause(0);});});
+['mouseleave','focusout'].forEach(function(e){r.addEventListener(e,function(){pause(600);});});
+['touchstart','pointerdown','wheel'].forEach(function(e){r.addEventListener(e,function(){pause(0);},{passive:true});});
+r.addEventListener('touchend',function(){pause(4000);},{passive:true});
+['avPrev','avNext'].forEach(function(id){document.getElementById(id).addEventListener('click',function(){pause(6000);});});
+if('IntersectionObserver' in window){new IntersectionObserver(function(en){visible=en[0].isIntersecting;},{threshold:.3}).observe(r);}else{visible=true;}
+requestAnimationFrame(frame);}
+}})();
 </script>
 <script>
 (function(){var f=[].slice.call(document.querySelectorAll('.lbx'));if(!f.length)return;var i=0;
