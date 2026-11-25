@@ -769,6 +769,21 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
 .foot-off a.fm{color:var(--t2);font-size:14px;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:600px){.foot-offices{grid-template-columns:1fr;gap:34px}}
 </style>
+<style id="pp-sub2">
+.pp-sub{background:rgba(255,255,255,.92)!important;border-bottom:1px solid #E6E8EC!important}
+.pp-sub-in{justify-content:center;min-height:76px!important;gap:6px!important}
+.pp-sub-in::before{content:none}
+.pp-sub-in{padding-top:12px;padding-bottom:12px}
+.pp-sub .pp-seg{display:inline-flex;gap:4px;padding:5px;border-radius:999px;background:#F1F2F4;border:1px solid #E3E5E9}
+.pp-pill{border:0!important;background:transparent!important;padding:11px 22px 11px 14px!important;gap:12px!important;font-size:15px!important;font-weight:600!important;color:#3A3C44!important;position:relative}
+.pp-pill i{width:32px;height:32px;border-radius:50%;background:#fff;color:#0560DE!important;box-shadow:0 1px 2px rgba(10,10,12,.08);transition:background .3s,color .3s,transform .3s}
+.pp-pill:hover{color:#0A0A0B!important}
+.pp-pill:hover i{transform:scale(1.08)}
+.pp-pill.on{background:#0A0A0B!important;color:#fff!important;box-shadow:0 8px 20px rgba(10,10,12,.22)}
+.pp-pill.on i{background:#0560DE;color:#fff!important}
+.pp-pill:not(:has(i)){padding-left:22px!important}
+@media(max-width:700px){.pp-sub-in{justify-content:flex-start;padding-left:16px;padding-right:16px}.pp-pill{padding:9px 16px 9px 10px!important;font-size:14px!important}.pp-pill i{width:28px;height:28px}}
+</style>
 </head>
 <body>
 
@@ -907,12 +922,10 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
 
   <!-- ================= STICKY JUMP NAV ================= -->
   <div class="pp-sub" role="navigation" aria-label="Product sections">
-    <div class="pp-sub-in">
-      <span class="mono">JUMP TO</span>
-      <a class="pp-pill on" href="#indoor" data-spy="indoor"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></i>Indoor</a>
+    <div class="pp-sub-in"><div class="pp-seg"><a class="pp-pill on" href="#indoor" data-spy="indoor"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></i>Indoor</a>
       <a class="pp-pill" href="#outdoor" data-spy="outdoor"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></i>Outdoor</a>
       <a class="pp-pill" href="#custom" data-spy="custom"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 005 5L11 20a2.1 2.1 0 01-3-3l8.7-8.7z"></path><path d="M15 9l-1-1"></path></svg></i>Custom-built</a>
-      <a class="pp-pill" href="#partner" data-spy="partner">Our partner</a>
+      <a class="pp-pill" href="#partner" data-spy="partner"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12l3 3 5-6"></path><circle cx="12" cy="12" r="9"></circle></svg></i>Our partner</a></div>
     </div>
   </div>
 
