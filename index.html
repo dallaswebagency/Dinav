@@ -649,7 +649,16 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
 @keyframes pcxspin{to{transform:rotate(360deg)}}
 @media(max-width:900px){.pcx{padding:72px 0 80px}.pcx-grid{grid-template-columns:1fr}.pcx-line{display:none}.pcx-head{margin-bottom:36px}}
 @media(prefers-reduced-motion:reduce){.pcx-ico svg,.pcx-ico::after{animation:none}}
-</style></head>
+</style><style id="hs-css">.h-slides{position:absolute;inset:-4% 0 -4% 0;width:100%;height:108%;transform:translateY(var(--py,0px));will-change:transform;z-index:-1;background:#000}
+.h-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.02);transition:opacity 1.4s ease}
+.h-slides img.on{opacity:1;animation:hsZoom 7s ease-out forwards}
+@keyframes hsZoom{from{transform:scale(1.02)}to{transform:scale(1.1)}}
+.h-dots{position:absolute;right:64px;bottom:176px;display:flex;gap:10px;z-index:4}
+.h-dots button{width:34px;height:4px;border:0;border-radius:2px;background:rgba(255,255,255,.35);cursor:pointer;padding:0;position:relative;overflow:hidden}
+.h-dots button.on::after{content:"";position:absolute;inset:0;background:#fff;transform-origin:left;animation:hsBar 5s linear forwards}
+@keyframes hsBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:900px){.h-dots{right:24px;bottom:auto;top:76px}}
+@media(prefers-reduced-motion:reduce){.h-slides img.on{animation:none}.h-dots button.on::after{animation:none}}</style></head>
 <body>
 
 <div id="top" class="disp-root js-on js-pin" style="font-family:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;background:#fff;color:#0A0A0B;overflow-x:clip;position:relative">
@@ -761,7 +770,7 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
 
   <!-- ================= HERO ================= -->
   <section class="c-hero" aria-label="Introduction">
-    <video id="dnVideo" src="assets/hero.mp4" poster="assets/img-07.jpg" autoplay="" muted="" loop="" playsinline="" aria-hidden="true"></video>
+    <div id="dnVideo" class="h-slides" aria-hidden="true"><img src="assets/img/hero-1-setup.webp" alt="" class="on" decoding="async"><img src="assets/img/hero-2-install.webp" alt="" class="" loading="lazy" decoding="async"><img src="assets/img/hero-3-connect.webp" alt="" class="" loading="lazy" decoding="async"><img src="assets/img/hero-4-live.webp" alt="" class="" loading="lazy" decoding="async"></div>
     <div class="h-shade"></div>
     <div class="h-blue" aria-hidden="true"></div>
     <div class="h-grid" aria-hidden="true"></div>
@@ -769,9 +778,8 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
     <div class="h-grain" aria-hidden="true"></div>
     <i class="h-corner tl" aria-hidden="true"></i><i class="h-corner tr" aria-hidden="true"></i><i class="h-corner bl" aria-hidden="true"></i><i class="h-corner br" aria-hidden="true"></i>
 
-    <div class="h-top mono" aria-hidden="true">
-      <span class="h-rec-l"><span class="rec"><i></i>REC</span><span class="sub">Dinav Solutions showreel</span></span>
-    </div>
+    <div class="h-dots" aria-label="Hero images"><button type="button" aria-label="Image 1" class="on"></button><button type="button" aria-label="Image 2"></button><button type="button" aria-label="Image 3"></button><button type="button" aria-label="Image 4"></button></div>
+    
 
     <div class="h-main">
       <h1 class="h-h1">
@@ -1080,7 +1088,7 @@ root.classList.add('js-on');
 if (!tall && !rm) root.classList.add('js-pin');
 
 var v = document.getElementById('dnVideo');
-if (v) { v.muted = true; var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); }
+if (v && v.play) { v.muted = true; var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); }
 
 /* ---- custom cursor ---- */
 if (fine && !rm) {
@@ -1178,4 +1186,7 @@ function pause(ms){paused=true;clearTimeout(resume);resume=setTimeout(function()
 ['mouseleave','focusout'].forEach(function(e){t.addEventListener(e,function(){pause(1200)})});
 new IntersectionObserver(function(en){vis=en[0].isIntersecting}).observe(t);
 function step(ts){var dt=Math.min(ts-last,50);last=ts;if(vis&&!paused){if(hold>0){hold-=dt}else{var max=t.scrollWidth-t.clientWidth;if(t.scrollLeft>=max-1){hold=2200;t.style.scrollBehavior='smooth';pos=0;t.scrollLeft=0;setTimeout(function(){t.style.scrollBehavior=''},900);hold=3200}else{if(Math.abs(t.scrollLeft-lastSet)>3)pos=t.scrollLeft;pos+=dt*0.03;t.scrollLeft=pos;lastSet=t.scrollLeft}}}requestAnimationFrame(step)}
-requestAnimationFrame(step)})();</script></body></html>
+requestAnimationFrame(step)})();</script><script>(function(){var w=document.getElementById('dnVideo');if(!w)return;var im=w.querySelectorAll('img'),ds=document.querySelectorAll('.h-dots button'),i=0,t;
+function show(n){i=(n+im.length)%im.length;im.forEach(function(e,k){e.classList.remove('on');if(k===i){void e.offsetWidth;e.classList.add('on');e.loading='eager'}});ds.forEach(function(d,k){d.classList.remove('on');if(k===i){void d.offsetWidth;d.classList.add('on')}})}
+function start(){clearInterval(t);if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;t=setInterval(function(){if(!document.hidden)show(i+1)},5000)}
+ds.forEach(function(d,k){d.addEventListener('click',function(){show(k);start()})});start()})();</script></body></html>
