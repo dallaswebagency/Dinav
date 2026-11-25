@@ -682,7 +682,91 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
 .h-dots button.on::after{inset:auto 0 0 0;height:4px;background:#2B8AFF}
 .h-main{align-items:flex-start!important;justify-content:flex-end!important;text-align:left;padding:120px 64px 56px!important;max-width:1440px;margin:0 auto!important;width:100%}.h-h1{margin:0!important}.h-side{align-self:flex-start}.h-h1,.h-h1 .mask{text-align:left;justify-content:flex-start}.h-h1{max-width:760px}.h-side{max-width:540px;align-items:flex-start}.h-p{text-align:left}.h-side>div{justify-content:flex-start!important}
 @media(max-width:900px){.h-dots{right:16px;top:auto;bottom:240px;transform:none;flex-direction:row}.h-dots button{width:56px;height:38px;border-radius:8px}.h-dots button.on,.h-dots button:hover{transform:none}}
+</style><style id="v2-split">
+.c-hero{background:radial-gradient(60% 70% at 85% 20%,rgba(43,138,255,.22),transparent 70%),radial-gradient(50% 60% at 0 100%,rgba(5,96,222,.2),transparent 70%),#0A0B0F}
+.c-hero .h-shade,.c-hero .h-corner,.c-hero .h-sweep{display:none}
+.h-slides{inset:auto!important;right:64px!important;top:64px!important;bottom:150px!important;width:calc(50% - 64px);height:auto!important;transform:none!important;border-radius:28px;overflow:hidden;z-index:1;box-shadow:0 40px 90px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.12)}
+.h-main{position:relative;z-index:2;max-width:none!important;width:100%;padding:90px 0 70px 64px!important}
+.h-main>*{max-width:min(600px,46vw)}
+.h-h1{max-width:none!important}
+.h-dots{right:auto;left:calc(50% + 24px);bottom:auto;top:auto;transform:none!important;flex-direction:row;z-index:4;position:absolute;bottom:182px;gap:12px}
+.h-dots button{width:92px;height:56px;border-radius:12px;transform:none!important}
+.h-dots button:hover{transform:translateY(-4px)!important}
+.h-dots button.on{transform:none!important}
+@media(max-width:900px){.c-hero{display:flex}.h-slides{position:relative!important;order:3;right:auto;top:auto;bottom:auto;width:auto;margin:0 20px 20px;height:260px!important;border-radius:20px}.h-main{padding:48px 24px 28px!important;order:1}.h-main>*{max-width:none}.h-dots{display:none}.h-stats{order:4}}
+</style><style id="wb-css">
+.wbs{background:#F1F2F4;padding:110px 0 100px;border-top:1px solid #E0E2E6}
+.wbs-head{display:flex;flex-direction:column;gap:14px;margin-bottom:48px}
+.wbs-head p{font-size:17px;line-height:1.6;color:#4A4E57;max-width:520px;margin:0}
+.wbs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.wb{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid #DADCE1;border-radius:24px;overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s,border-color .3s,background .45s}
+.wb-im{position:relative;display:block;height:230px;overflow:hidden}
+.wb-im img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.wb-ico{position:absolute;left:28px;bottom:-30px;width:68px;height:68px;border-radius:20px;background:#0560DE;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(5,96,222,.7);transition:transform .5s,background .4s,color .4s}
+.wb-ico svg{width:34px;height:34px}
+.wb-body{display:flex;flex-direction:column;gap:12px;padding:50px 28px 30px;flex:1}
+.wb-tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#0560DE;transition:color .4s}
+.wb h3{font-size:clamp(22px,2vw,28px)!important;line-height:1.12!important;margin:0;font-weight:700;letter-spacing:-.015em;color:#0A0A0B;transition:color .4s}
+.wb p{margin:0;font-size:15.5px;line-height:1.6;color:#4A4E57;transition:color .4s}
+.wb-chips{display:flex;flex-wrap:wrap;gap:8px}
+.wb-chips span{font-size:12.5px;padding:6px 12px;border-radius:999px;background:#F1F2F4;color:#2A2D34;transition:background .4s,color .4s}
+.wb-go{margin-top:auto;padding-top:10px;display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;color:#0560DE;transition:color .4s}
+.wb-go i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#0560DE;color:#fff;transition:transform .4s,background .4s,color .4s}
+.wb:hover{transform:translateY(-10px) scale(1.02);background:linear-gradient(165deg,#0560DE,#0A3F9E);border-color:#0560DE;box-shadow:0 34px 60px -24px rgba(5,96,222,.6)}
+.wb:hover img{transform:scale(1.08)}
+.wb:hover h3,.wb:hover p,.wb:hover .wb-go{color:#fff}.wb:hover .wb-tag{color:#9CC8FF}
+.wb:hover .wb-chips span{background:rgba(255,255,255,.16);color:#fff}
+.wb:hover .wb-ico{background:#fff;color:#0560DE;transform:rotate(-6deg) scale(1.08)}
+.wb:hover .wb-go i{background:#fff;color:#0560DE;transform:translateX(6px)}
+.wbs-more{margin-top:48px;display:flex;justify-content:center}
+@media(max-width:900px){.wbs{padding:72px 0}.wbs-grid{grid-template-columns:1fr}.wb-im{height:200px}}
+.wb-im{overflow:visible!important}.wb-clip{position:absolute;inset:0;overflow:hidden;display:block}.wb-im{display:block;position:relative}</style><style id="v2-rest">
+.v2m{background:linear-gradient(135deg,#0560DE 0%,#0A3F9E 60%,#082B6E 100%);color:#fff;padding:110px 0;position:relative;overflow:hidden}
+.v2m::before{content:"";position:absolute;right:-10%;top:-40%;width:60%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.18),transparent)}
+.v2m-in{position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:end}
+.v2m .lab{color:#CFE3FF}
+.v2m-l p{margin:22px 0 0;font-size:clamp(30px,3.8vw,56px);line-height:1.1;font-weight:700;letter-spacing:-.025em}
+.v2m-l em{font-style:normal;color:#9CC8FF}
+.v2m-r p{margin:0 0 28px;font-size:18px;line-height:1.65;color:rgba(255,255,255,.88)}
+.v2m-cta{display:flex;flex-wrap:wrap;gap:14px}
+.v2m .btn-white{background:#fff;color:#0560DE}.v2m .btn-line{border-color:rgba(255,255,255,.6);color:#fff}.v2m .btn-line:hover{color:#0560DE}
+.v2b{background:#fff;padding:110px 0}
+.v2b-head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px;max-width:900px}
+.v2b-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(200px,auto);gap:18px}
+.bx{border-radius:26px;overflow:hidden;position:relative;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+.bx:hover{transform:translateY(-6px);box-shadow:0 28px 50px -26px rgba(5,60,160,.45)}
+.bx img{width:100%;height:100%;object-fit:cover;transition:transform 1s}.bx:hover img{transform:scale(1.06)}
+.bx-img{grid-column:1/3;grid-row:1/3;min-height:420px}
+.bx-stat{grid-column:3;background:#0560DE;color:#fff;padding:30px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px}
+.bx-stat b{font-size:clamp(64px,7vw,104px);line-height:.9;letter-spacing:-.04em}.bx-stat span{font-size:16px;opacity:.9}
+.bx-txt{grid-column:4;grid-row:1/3;background:#F1F2F4;padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.bx-txt p{margin:0;font-size:16.5px;line-height:1.7;color:#2A2D34}
+.bx-ft{background:#0A0B0F;color:#fff;padding:30px;display:flex;flex-direction:column;gap:12px}
+.bx-ic{width:54px;height:54px;border-radius:16px;background:rgba(43,138,255,.2);color:#6FB0FF;display:grid;place-items:center;transition:background .4s,color .4s,transform .5s}
+.bx-ft:hover .bx-ic{background:#2B8AFF;color:#fff;transform:rotate(-8deg) scale(1.08)}
+.bx-ft h3{font-size:22px!important;line-height:1.15!important;margin:0;font-weight:700;color:#fff}.bx-ft p{margin:0;font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.72)}
+.bx-ft2{grid-column:1/3;justify-content:center;padding:36px}.bx-ft2 p{max-width:520px;font-size:16px}.bx-img2{grid-column:3/5;height:250px}.bx-img2 img{position:absolute;inset:0}
+.v2c-sec{background:#0A0B0F;color:#fff;padding:110px 0}
+.v2c-head{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:end;margin-bottom:44px}
+.v2c-head .h2{margin-top:14px;color:#fff}.v2c-head .lab{color:#6FB0FF}
+.v2c-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.v2c{position:relative;display:block;min-height:420px;border-radius:26px;overflow:hidden;isolation:isolate;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.v2c img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1s}
+.v2c-sh{position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(5,15,45,.92),rgba(5,15,45,.2) 65%);transition:background .5s}
+.v2c:hover{transform:translateY(-8px)}.v2c:hover img{transform:scale(1.07)}.v2c:hover .v2c-sh{background:linear-gradient(0deg,rgba(5,96,222,.92),rgba(5,96,222,.25) 70%)}
+.v2c-b{position:absolute;left:0;right:0;bottom:0;padding:28px;display:flex;flex-direction:column;gap:10px}
+.v2c-tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#9CC8FF}.v2c:hover .v2c-tag{color:#fff}
+.v2c h3{margin:0;font-size:clamp(22px,2vw,28px)!important;line-height:1.12!important;color:#fff}
+.v2c-go{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px}
+.v2c-go i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#fff;color:#0560DE;transition:transform .4s}.v2c:hover .v2c-go i{transform:translateX(6px)}
+.clients{background:#F1F2F4}
+.reviews{background:#082B6E!important;border-top:0!important;color:#fff}
+.reviews .h2{color:#fff!important}.reviews .lab{color:#9CC8FF!important}
+.reviews .rv-card{background:rgba(255,255,255,.08)!important;border-color:rgba(255,255,255,.2)!important}
+.reviews .rv-card blockquote,.reviews .rv-card figcaption b{color:#fff!important}.reviews .rv-card figcaption span{color:#BFD7FF}.reviews .rv-q{color:#6FB0FF!important}
+@media(max-width:900px){.v2m,.v2b,.v2c-sec{padding:72px 0}.v2m-in{grid-template-columns:1fr;gap:32px}.v2b-grid{grid-template-columns:1fr 1fr}.bx-img{grid-column:1/3;grid-row:auto;min-height:260px}.bx-stat{grid-column:1}.bx-txt{grid-column:2;grid-row:auto}.bx-ft,.bx-ft2{grid-column:1/3}.bx-img2{grid-column:1/3;min-height:200px}.v2c-grid{grid-template-columns:1fr}.v2c{min-height:320px}}
 </style></head>
+
 <body>
 
 <div id="top" class="disp-root js-on js-pin" style="font-family:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;background:#fff;color:#0A0A0B;overflow-x:clip;position:relative">
@@ -830,7 +914,20 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
 
 
   <!-- ================= CLIENTS ================= -->
-  <section id="clients" class="clients">
+  <section id="solutions" class="wbs"><div class="wrap"><div class="wbs-head reveal"><span class="lab mono">What we do</span><h2 class="h2">Three disciplines. One partner.</h2><p>Each one is a complete service, from design and installation through to maintenance.</p></div><div class="wbs-grid"><a class="wb reveal" style="--d:0ms" href="audiovisual.html"><span class="wb-im"><span class="wb-clip"><img src="assets/img-03.jpg" alt="" loading="lazy"></span><span class="wb-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="52" height="34" rx="4"/><path d="M22 56h20M32 44v12"/><path d="M26 20l14 7-14 7z" fill="currentColor" fill-opacity=".25"/></svg></span></span><span class="wb-body"><span class="wb-tag mono">Audiovisual</span><h3>Audiovisual Solutions</h3><p>We are specialists in state-of-the-art audiovisual projects. We provide innovative and customised solutions.</p><span class="wb-chips"><span>State-of-the-art</span><span>Innovative</span><span>Customised</span></span><span class="wb-go">Discover <i><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></i></span></span></a><a class="wb reveal" style="--d:120ms" href="people-flow.html"><span class="wb-im"><span class="wb-clip"><img src="assets/img-05.jpg" alt="" loading="lazy"></span><span class="wb-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="5"/><circle cx="50" cy="14" r="5"/><circle cx="32" cy="50" r="5"/><path d="M19 14h26M16 19l14 27M48 19L34 46"/><circle cx="32" cy="27" r="3" fill="currentColor"/></svg></span></span><span class="wb-body"><span class="wb-tag mono">People flow</span><h3>People Flow Management Systems</h3><p>Our experience enables us to provide secure and efficient customer management solutions (people flows).</p><span class="wb-chips"><span>Secure</span><span>Efficient</span></span><span class="wb-go">Discover <i><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></i></span></span></a><a class="wb reveal" style="--d:240ms" href="it-networking.html"><span class="wb-im"><span class="wb-clip"><img src="assets/img-02.jpg" alt="" loading="lazy"></span><span class="wb-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="6" width="44" height="14" rx="3"/><rect x="10" y="25" width="44" height="14" rx="3"/><rect x="10" y="44" width="44" height="14" rx="3"/><path d="M18 13h.01M18 32h.01M18 51h.01M30 13h16M30 32h16M30 51h16"/></svg></span></span><span class="wb-body"><span class="wb-tag mono">IT and Networking</span><h3>IT and Networking Solutions</h3><p>We develop, install and maintain the technology that keeps commercial spaces working.</p><span class="wb-chips"><span>Develop</span><span>Installation</span><span>Maintenance</span></span><span class="wb-go">Discover <i><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></i></span></span></a></div><div class="wbs-more"><a class="btn btn-blue mag" href="products.html">Browse our products <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></a></div></div></section>
+<section class="v2m" aria-label="What we do"><div class="wrap v2m-in"><div class="v2m-l"><span class="lab mono">Dinav Solutions</span><p>We help organisations <em>plan, install and support</em> the technology behind their spaces.</p></div><div class="v2m-r"><p>Our teams bring together IT, audiovisual and people-flow expertise to deliver dependable results across Europe and the UK.</p><div class="v2m-cta"><a class="btn btn-white mag" href="about.html">About us <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></a><a class="btn btn-line mag" href="#solutions">Our solutions</a></div></div></div></section>
+<section id="process" class="pcx" aria-label="Our process"><div class="wrap"><div class="pcx-head reveal"><span class="lab mono">Our process</span><h2 class="h2">From first design to long-term support.</h2></div><div class="pcx-grid"><article class="pcx-card reveal" style="--d:0ms"><div class="pcx-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14V4h10M60 14V4H50M4 50v10h10M60 50v10H50" stroke="#0560DE"/><path d="M32 10l20 11v22L32 54 12 43V21z"/><path d="M32 10l20 11-20 11-20-11z" fill="#0560DE" fill-opacity=".16" stroke="#0560DE"/><path d="M32 32v22M12 21v22M52 21v22" opacity=".55"/></svg></div><span class="pcx-tag mono">Plan</span><h3 class="pcx-ttl">Develop</h3><p>We develop computer and audiovisual solutions around your space and the way your people and customers use it.</p><span class="pcx-bar" aria-hidden="true"></span></article><article class="pcx-card reveal" style="--d:120ms"><div class="pcx-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="52" height="34" rx="4"/><path d="M22 55h20M32 43v12"/><path d="M15 34l9-9 7 6 12-13 6 6" stroke="#0560DE"/><circle cx="49" cy="24" r="3.2" fill="#0560DE" stroke="#0560DE"/><circle cx="15" cy="34" r="2.4" fill="#fff" stroke="#0560DE"/></svg></div><span class="pcx-tag mono">Build</span><h3 class="pcx-ttl">Installation</h3><p>Our team carries out the installation and execution, drawing on the multiple installations we have completed across Europe.</p><span class="pcx-bar" aria-hidden="true"></span></article><article class="pcx-card reveal" style="--d:240ms"><div class="pcx-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6l21 8v15c0 14-9 24-21 29C20 53 11 43 11 29V14z" fill="#0560DE" fill-opacity=".1"/><path d="M21 32l8 8 15-17" stroke="#0560DE" stroke-width="2.4"/><path d="M32 6l21 8v15c0 14-9 24-21 29" opacity=".0"/><path d="M58 22a28 28 0 0 1-3 22M6 42a28 28 0 0 1 3-22" opacity=".45"/></svg></div><span class="pcx-tag mono">Support</span><h3 class="pcx-ttl">Maintenance</h3><p>Once the systems are live we keep them running, with maintenance that makes us a long-term strategic and technological partner.</p><span class="pcx-bar" aria-hidden="true"></span></article><span class="pcx-line" aria-hidden="true"></span></div></div></section>
+<section id="about" class="v2b"><div class="wrap"><div class="v2b-head reveal"><span class="lab mono">About us · Dinav Solutions</span><h2 class="h2">A key strategic and technological partner.</h2></div>
+<div class="v2b-grid">
+<div class="bx bx-img"><img src="assets/img-14.jpg" alt="Large LED displays installed in a retail atrium" loading="lazy"></div>
+<div class="bx bx-stat"><b>20+</b><span>years of experience</span></div>
+<div class="bx bx-txt"><p>With more than 20 years of experience, Dinav Solutions designs, installs and maintains IT and audiovisual systems. We also deliver people-flow solutions. Working across Europe and the UK, we build trusted client relationships and support projects from planning through to ongoing service.</p><a class="btn btn-blue mag" href="about.html">More about us <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></a></div>
+<div class="bx bx-ft"><span class="bx-ic"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14l5-5 4 4 7-7"/><path d="M15 6h4v4"/></svg></span><h3>Long-lasting trust</h3><p>Our work allows us to establish excellent and long-lasting relationships of trust with our clients, making us a key strategic and technological partner.</p></div>
+<div class="bx bx-ft bx-ft2"><span class="bx-ic"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13" r="10"/><path d="M3 13h20M13 3c3 3 4 6 4 10s-1 7-4 10c-3-3-4-6-4-10s1-7 4-10z"/></svg></span><h3>International vocation</h3><p>Our international vocation has enabled us to provide services, manage and carry out projects across Europe and the UK.</p></div>
+<div class="bx bx-img2"><img src="assets/img-02.jpg" alt="Engineer checking equipment in a server room" loading="lazy"></div>
+</div></div></section>
+<section class="v2c-sec"><div class="wrap"><div class="v2c-head reveal"><div><span class="lab mono">Projects</span><h2 class="h2">Business Success Stories</h2></div><a class="btn btn-blue mag" href="success-stories.html">See all stories <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></a></div><div class="v2c-grid"><a class="v2c reveal" style="--d:0ms" href="success-stories.html"><img src="assets/img-15.jpg" alt="" loading="lazy"><span class="v2c-sh"></span><span class="v2c-b"><span class="v2c-tag mono">People flow management</span><h3>Primark, Praha</h3><span class="v2c-go">View story <i><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></i></span></span></a><a class="v2c reveal" style="--d:120ms" href="success-stories.html"><img src="assets/img-16.jpg" alt="" loading="lazy"><span class="v2c-sh"></span><span class="v2c-b"><span class="v2c-tag mono">People flow management</span><h3>Primark, checkout systems</h3><span class="v2c-go">View story <i><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></i></span></span></a><a class="v2c reveal" style="--d:240ms" href="success-stories.html"><img src="assets/img-06.jpg" alt="" loading="lazy"><span class="v2c-sh"></span><span class="v2c-b"><span class="v2c-tag mono">Audiovisual</span><h3>Primark, Gran Via</h3><span class="v2c-go">View story <i><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></i></span></span></a></div></div></section>
+<section id="clients" class="clients">
     <div class="wrap">
       <div class="reveal cl-head">
         <div style="display:flex;flex-direction:column;gap:16px">
@@ -844,175 +941,33 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
       <div class="mq-track" style="animation:marquee 40s linear infinite"><div class="logo-tile"><img src="assets/img-08.png" alt="Primark logo"></div><div class="logo-tile"><img src="assets/img-09.png" alt="Private Jet logo"></div><div class="logo-tile"><img src="assets/img-10.png" alt="Natur House logo"></div><div class="logo-tile"><img src="assets/img-11.png" alt="Sanofi Pasteur MSD logo"></div><div class="logo-tile"><img src="assets/img-12.png" alt="Nazca logo"></div><div class="logo-tile"><img src="assets/img-13.png" alt="Handy AV logo"></div><div class="logo-tile"><img src="assets/img-08.png" alt="Primark logo"></div><div class="logo-tile"><img src="assets/img-09.png" alt="Private Jet logo"></div><div class="logo-tile"><img src="assets/img-10.png" alt="Natur House logo"></div><div class="logo-tile"><img src="assets/img-11.png" alt="Sanofi Pasteur MSD logo"></div><div class="logo-tile"><img src="assets/img-12.png" alt="Nazca logo"></div><div class="logo-tile"><img src="assets/img-13.png" alt="Handy AV logo"></div><div class="logo-tile"><img src="assets/img-08.png" alt="Primark logo"></div><div class="logo-tile"><img src="assets/img-09.png" alt="Private Jet logo"></div><div class="logo-tile"><img src="assets/img-10.png" alt="Natur House logo"></div><div class="logo-tile"><img src="assets/img-11.png" alt="Sanofi Pasteur MSD logo"></div><div class="logo-tile"><img src="assets/img-12.png" alt="Nazca logo"></div><div class="logo-tile"><img src="assets/img-13.png" alt="Handy AV logo"></div><div class="logo-tile"><img src="assets/img-08.png" alt="Primark logo"></div><div class="logo-tile"><img src="assets/img-09.png" alt="Private Jet logo"></div><div class="logo-tile"><img src="assets/img-10.png" alt="Natur House logo"></div><div class="logo-tile"><img src="assets/img-11.png" alt="Sanofi Pasteur MSD logo"></div><div class="logo-tile"><img src="assets/img-12.png" alt="Nazca logo"></div><div class="logo-tile"><img src="assets/img-13.png" alt="Handy AV logo"></div></div>
     </div>
   </section>
-
-  <!-- ================= MANIFESTO ================= -->
-  <section class="mani" aria-label="What we do">
-    <div class="wrap">
-      <span class="lab mono" style="margin-bottom:34px">Dinav Solutions</span>
-      <p class="mani-text" id="mani"><span class="w">We</span> <span class="w">help</span> <span class="w">organisations</span> <span class="w hi">plan,</span> <span class="w hi">install</span> <span class="w hi">and</span> <span class="w hi">support</span> <span class="w">the</span> <span class="w">technology</span> <span class="w">behind</span> <span class="w">their</span> <span class="w">spaces.</span> <span class="w">Our</span> <span class="w">teams</span> <span class="w">bring</span> <span class="w">together</span> <span class="w">IT,</span> <span class="ipill" aria-hidden="true"><img src="assets/img-02.jpg" alt=""></span> <span class="w">audiovisual</span> <span class="w">and</span> <span class="ipill" aria-hidden="true"><img src="assets/img-03.jpg" alt=""></span> <span class="w">people-flow</span> <span class="w">expertise</span> <span class="w">to</span> <span class="w">deliver</span> <span class="w">dependable</span> <span class="w">results</span> <span class="w">across</span> <span class="w hi">Europe</span> <span class="w hi">and</span> <span class="w hi">the</span> <span class="w hi">UK.</span></p>
-      <div class="mani-foot">
-        <a class="btn btn-white mag" href="about.html">About us <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></a>
-        <a class="btn btn-line mag" href="#solutions">Our solutions</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= SOLUTIONS (sticky stack) ================= -->
-  <section id="solutions" class="stack">
-    <div class="wrap">
-      <div class="stack-head reveal">
-        <div style="display:flex;flex-direction:column;gap:20px">
-          <span class="lab mono">What we do</span>
-          <h2 class="h2">Three disciplines.<br><span class="outline">One partner.</span></h2>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start">
-          <p style="font-size:18px;line-height:1.65;color:var(--t2);max-width:440px;text-wrap:pretty">Each one is a complete service, from design and installation through to maintenance.</p>
-          <a class="btn btn-white mag" href="products.html">Browse our products <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></a>
-        </div>
-      </div>
-
-      <div class="stack-list">
-        <a class="scard" style="--i:0" href="audiovisual.html">
-          <span class="scard-word" aria-hidden="true">AV</span>
-          <span class="scard-l">
-            <span class="scard-tag mono">Audiovisual</span>
-            <h3>Audiovisual Solutions</h3>
-            <p>We are specialists in state-of-the-art audiovisual projects. We provide innovative and customised solutions.</p>
-            <span class="chips"><span>State-of-the-art</span><span>Innovative</span><span>Customised</span></span>
-            <span class="scard-go">Discover <i><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></i></span>
-          </span>
-          <span class="scard-r"><img src="assets/img-03.jpg" alt="Large LED video cube above an ice arena"><i class="scard-scan"></i></span>
-        </a>
-        <a class="scard" style="--i:1" href="people-flow.html">
-          <span class="scard-word" aria-hidden="true">FLOW</span>
-          <span class="scard-l">
-            <span class="scard-tag mono">People flow</span>
-            <h3>People Flow Management Systems</h3>
-            <p>Our experience enables us to provide secure and efficient customer management solutions (people flows).</p>
-            <span class="chips"><span>Secure</span><span>Efficient</span></span>
-            <span class="scard-go">Discover <i><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></i></span>
-          </span>
-          <span class="scard-r"><img src="assets/img-05.jpg" alt="Customer using a self-service touchscreen kiosk"><i class="scard-scan"></i></span>
-        </a>
-        <a class="scard" style="--i:2" href="it-networking.html">
-          <span class="scard-word" aria-hidden="true">IT</span>
-          <span class="scard-l">
-            <span class="scard-tag mono">IT and Networking</span>
-            <h3>IT and Networking Solutions</h3>
-            <p>We develop, install and maintain the technology that keeps commercial spaces working.</p>
-            <span class="chips"><span>Develop</span><span>Installation</span><span>Maintenance</span></span>
-            <span class="scard-go">Discover <i><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></i></span>
-          </span>
-          <span class="scard-r"><img src="assets/img-02.jpg" alt="Engineer working in a server room"><i class="scard-scan"></i></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= PROCESS (pinned horizontal) ================= -->
-  <section id="process" class="pcx" aria-label="Our process"><div class="wrap"><div class="pcx-head reveal"><span class="lab mono">Our process</span><h2 class="h2">From first design to long-term support.</h2></div><div class="pcx-grid"><article class="pcx-card reveal" style="--d:0ms"><div class="pcx-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14V4h10M60 14V4H50M4 50v10h10M60 50v10H50" stroke="#0560DE"/><path d="M32 10l20 11v22L32 54 12 43V21z"/><path d="M32 10l20 11-20 11-20-11z" fill="#0560DE" fill-opacity=".16" stroke="#0560DE"/><path d="M32 32v22M12 21v22M52 21v22" opacity=".55"/></svg></div><span class="pcx-tag mono">Plan</span><h3 class="pcx-ttl">Develop</h3><p>We develop computer and audiovisual solutions around your space and the way your people and customers use it.</p><span class="pcx-bar" aria-hidden="true"></span></article><article class="pcx-card reveal" style="--d:120ms"><div class="pcx-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="52" height="34" rx="4"/><path d="M22 55h20M32 43v12"/><path d="M15 34l9-9 7 6 12-13 6 6" stroke="#0560DE"/><circle cx="49" cy="24" r="3.2" fill="#0560DE" stroke="#0560DE"/><circle cx="15" cy="34" r="2.4" fill="#fff" stroke="#0560DE"/></svg></div><span class="pcx-tag mono">Build</span><h3 class="pcx-ttl">Installation</h3><p>Our team carries out the installation and execution, drawing on the multiple installations we have completed across Europe.</p><span class="pcx-bar" aria-hidden="true"></span></article><article class="pcx-card reveal" style="--d:240ms"><div class="pcx-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6l21 8v15c0 14-9 24-21 29C20 53 11 43 11 29V14z" fill="#0560DE" fill-opacity=".1"/><path d="M21 32l8 8 15-17" stroke="#0560DE" stroke-width="2.4"/><path d="M32 6l21 8v15c0 14-9 24-21 29" opacity=".0"/><path d="M58 22a28 28 0 0 1-3 22M6 42a28 28 0 0 1 3-22" opacity=".45"/></svg></div><span class="pcx-tag mono">Support</span><h3 class="pcx-ttl">Maintenance</h3><p>Once the systems are live we keep them running, with maintenance that makes us a long-term strategic and technological partner.</p><span class="pcx-bar" aria-hidden="true"></span></article><span class="pcx-line" aria-hidden="true"></span></div></div></section>
-
-  <!-- ================= ABOUT ================= -->
-  <section id="about" class="about">
-    <div class="wrap">
-      <div class="reveal" style="display:flex;flex-direction:column;gap:20px;max-width:1080px">
-        <span class="lab mono">About us · Dinav Solutions</span>
-        <h2 class="h2">A key strategic and technological partner.</h2>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-media">
-          <div class="about-main imgreveal">
-            <img src="assets/img-14.jpg" alt="Large LED displays installed in a retail atrium" style="object-position:50% 40%">
-          </div>
-          <div class="about-sub">
-            <img src="assets/img-02.jpg" alt="Engineer checking equipment in a server room" style="object-position:50% 30%">
-          </div>
-        </div>
-
-        <div style="display:flex;flex-direction:column">
-          <div class="big17 reveal"><span class="stat"><span class="odo" role="img" aria-label="20"><span class="odo-col" style="--d:2;animation-delay:0.00s">0
-1
-2
-3
-4
-5
-6
-7
-8
-9</span><span class="odo-col" style="--d:0;animation-delay:0.18s">0
-1
-2
-3
-4
-5
-6
-7
-8
-9</span></span></span><span class="plus" aria-hidden="true">+</span><span class="cap">years of<br>experience</span></div>
-          <p class="about-lead reveal" style="margin-bottom:44px">With more than 20 years of experience, Dinav Solutions designs, installs and maintains IT and audiovisual systems. We also deliver people-flow solutions. Working across Europe and the UK, we build trusted client relationships and support projects from planning through to ongoing service.</p>
-
-          <div class="prow reveal">
-            <span class="prow-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14l5-5 4 4 7-7"></path><path d="M15 6h4v4"></path><path d="M4 22h18"></path></svg></span>
-            <div><h3>Long-lasting trust</h3><p>Our work allows us to establish excellent and long-lasting relationships of trust with our clients, making us a key strategic and technological partner.</p></div>
-          </div>
-          <div class="prow reveal">
-            <span class="prow-ico" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="13" r="10"></circle><path d="M3 13h20M13 3c3 3 4.5 6.5 4.5 10S16 20 13 23M13 3c-3 3-4.5 6.5-4.5 10S10 20 13 23"></path></svg></span>
-            <div><h3>International vocation</h3><p>Our international vocation has enabled us to provide services, manage and carry out projects across Europe and the UK.</p></div>
-          </div>
-
-          <div class="route reveal">
-            <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px">
-              <span class="disp" style="font-weight:700;font-size:22px;letter-spacing:-.02em">Projects and field support across Europe and the UK</span>
-            </div>
-            <div class="cdots" aria-hidden="true"><span class="cdot" style="animation-delay:0.00s"></span><span class="cdot" style="animation-delay:0.18s"></span><span class="cdot" style="animation-delay:0.36s"></span><span class="cdot" style="animation-delay:0.54s"></span><span class="cdot" style="animation-delay:0.72s"></span><span class="cdot" style="animation-delay:0.90s"></span><span class="cdot" style="animation-delay:1.08s"></span><span class="cdot" style="animation-delay:1.26s"></span><span class="cdot" style="animation-delay:1.44s"></span><span class="cdot" style="animation-delay:1.62s"></span><span class="cdot" style="animation-delay:1.80s"></span><span class="cdot" style="animation-delay:1.98s"></span><span class="cdot" style="animation-delay:2.16s"></span><span class="cdot" style="animation-delay:2.34s"></span><span class="cdot" style="background:transparent;border:2px dashed var(--blue-hi);animation-duration:1.4s"></span></div>
-          </div>
-
-          <div class="reveal" style="margin-top:36px;display:flex;flex-wrap:wrap;gap:14px;align-items:center">
-            <a class="btn btn-white mag" href="about.html">More about us <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></a>
-            <a class="btn btn-line mag" href="contact.html">Contact us</a>
-            <span class="disp" style="margin-left:6px;font-weight:700;font-size:20px;letter-spacing:-.02em">Dinav Solutions</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ================= SUCCESS STORIES ================= -->
-  <section class="stories">
-    <div class="wrap">
-      <div class="reveal" style="display:flex;flex-wrap:wrap;gap:24px 48px;align-items:end;justify-content:space-between">
-        <div style="display:flex;flex-direction:column;gap:16px">
-          <span class="lab mono">Projects</span>
-          <h2 class="h2">Business<br>Success Stories</h2>
-        </div>
-        <a class="btn btn-white mag" href="success-stories.html">See all stories <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></a>
-      </div>
-
-      <div class="st-wrap">
-        <div class="st-list">
-          <a class="st-item" href="success-stories.html"><span class="tg">People flow management</span><span class="tt">Primark, Praha</span><span class="go"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></span></a>
-          <a class="st-item" href="success-stories.html"><span class="tg">People flow management</span><span class="tt">Primark, checkout systems</span><span class="go"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></span></a>
-          <a class="st-item" href="success-stories.html"><span class="tg">Audiovisual</span><span class="tt">Primark, Gran Via</span><span class="go"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></span></a>
-        </div>
-        <div class="st-view" aria-hidden="true">
-          <img class="st-img" src="assets/img-15.jpg" alt="" style="object-position:35% 50%">
-          <img class="st-img" src="assets/img-16.jpg" alt="" style="object-position:55% 50%">
-          <img class="st-img" src="assets/img-06.jpg" alt="" style="object-position:50% 40%">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= REVIEWS ================= -->
-  <section id="testimonials" class="reviews" aria-label="Client reviews">
+<section id="testimonials" class="reviews" aria-label="Client reviews">
     <div class="wrap reveal" style="padding-bottom:40px;display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center">
       <span class="lab mono">Testimonials</span>
       <h2 class="h2" style="">What our clients say about working with us</h2>
     </div>
     <div class="rv-slider" id="rvTrack" aria-label="Client testimonials"><figure class="rv-card"><svg class="rv-q" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18v-5.5C4 8.6 6.2 6 9.5 5.3l.6 1.5C8.4 7.5 7.6 8.8 7.5 10.5H10V18zM14 18v-5.5c0-3.9 2.2-6.5 5.5-7.2l.6 1.5c-1.7.7-2.5 2-2.6 3.7H20V18z"></path></svg><blockquote>“Dinav has supported High Street Media with LCD installations and remote technical support. Their team is responsive and straightforward to work with, helping us get displays installed and resolve issues remotely. As our network grows, it’s valuable to have a technical partner we can rely on.”</blockquote><figcaption><b>Ben Pollard</b><span>High Street Media</span></figcaption></figure><figure class="rv-card"><svg class="rv-q" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18v-5.5C4 8.6 6.2 6 9.5 5.3l.6 1.5C8.4 7.5 7.6 8.8 7.5 10.5H10V18zM14 18v-5.5c0-3.9 2.2-6.5 5.5-7.2l.6 1.5c-1.7.7-2.5 2-2.6 3.7H20V18z"></path></svg><blockquote>“Dinav has been a valued partner in delivering LED and LCD installation and maintenance projects across Europe. Their combination of rapid on-site response and remote support helps keep projects moving. Their warehousing, distribution and stock-management support also helps ensure equipment and spares are where they need to be. We appreciate their professionalism and practical approach.”</blockquote><figcaption><b>Peter Livesey</b><span>Esprit Digital</span></figcaption></figure><figure class="rv-card"><svg class="rv-q" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18v-5.5C4 8.6 6.2 6 9.5 5.3l.6 1.5C8.4 7.5 7.6 8.8 7.5 10.5H10V18zM14 18v-5.5c0-3.9 2.2-6.5 5.5-7.2l.6 1.5c-1.7.7-2.5 2-2.6 3.7H20V18z"></path></svg><blockquote>“Dinav has supported High Street Media with LCD installations and remote technical support. Their team is responsive and straightforward to work with, helping us get displays installed and resolve issues remotely. As our network grows, it’s valuable to have a technical partner we can rely on.”</blockquote><figcaption><b>Ben Pollard</b><span>High Street Media</span></figcaption></figure><figure class="rv-card"><svg class="rv-q" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18v-5.5C4 8.6 6.2 6 9.5 5.3l.6 1.5C8.4 7.5 7.6 8.8 7.5 10.5H10V18zM14 18v-5.5c0-3.9 2.2-6.5 5.5-7.2l.6 1.5c-1.7.7-2.5 2-2.6 3.7H20V18z"></path></svg><blockquote>“Dinav has been a valued partner in delivering LED and LCD installation and maintenance projects across Europe. Their combination of rapid on-site response and remote support helps keep projects moving. Their warehousing, distribution and stock-management support also helps ensure equipment and spares are where they need to be. We appreciate their professionalism and practical approach.”</blockquote><figcaption><b>Peter Livesey</b><span>Esprit Digital</span></figcaption></figure><figure class="rv-card"><svg class="rv-q" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18v-5.5C4 8.6 6.2 6 9.5 5.3l.6 1.5C8.4 7.5 7.6 8.8 7.5 10.5H10V18zM14 18v-5.5c0-3.9 2.2-6.5 5.5-7.2l.6 1.5c-1.7.7-2.5 2-2.6 3.7H20V18z"></path></svg><blockquote>“Dinav has supported High Street Media with LCD installations and remote technical support. Their team is responsive and straightforward to work with, helping us get displays installed and resolve issues remotely. As our network grows, it’s valuable to have a technical partner we can rely on.”</blockquote><figcaption><b>Ben Pollard</b><span>High Street Media</span></figcaption></figure><figure class="rv-card"><svg class="rv-q" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 18v-5.5C4 8.6 6.2 6 9.5 5.3l.6 1.5C8.4 7.5 7.6 8.8 7.5 10.5H10V18zM14 18v-5.5c0-3.9 2.2-6.5 5.5-7.2l.6 1.5c-1.7.7-2.5 2-2.6 3.7H20V18z"></path></svg><blockquote>“Dinav has been a valued partner in delivering LED and LCD installation and maintenance projects across Europe. Their combination of rapid on-site response and remote support helps keep projects moving. Their warehousing, distribution and stock-management support also helps ensure equipment and spares are where they need to be. We appreciate their professionalism and practical approach.”</blockquote><figcaption><b>Peter Livesey</b><span>Esprit Digital</span></figcaption></figure></div>
   </section>
+
+
+  <!-- ================= MANIFESTO ================= -->
+  
+
+  <!-- ================= SOLUTIONS (sticky stack) ================= -->
+  
+
+  <!-- ================= PROCESS (pinned horizontal) ================= -->
+  
+
+  <!-- ================= ABOUT ================= -->
+  
+
+
+  <!-- ================= SUCCESS STORIES ================= -->
+  
+
+  <!-- ================= REVIEWS ================= -->
+  
 
 
   <!-- ================= FOOTER ================= -->
