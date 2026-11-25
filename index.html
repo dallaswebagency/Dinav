@@ -622,7 +622,34 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
 @media(max-width:600px){.foot-offices{grid-template-columns:1fr;gap:34px}}
 </style>
 <style id="logo-css">.brand-logo{display:block;height:46px;width:auto}.foot-logo{display:inline-flex;align-self:flex-start;padding:0}.foot-logo img{display:block;height:84px;width:auto;filter:drop-shadow(0 2px 10px rgba(0,0,0,.35))}@media(max-width:900px){.brand-logo{height:40px}}</style>
-<style id="rv-css">.rv-two{grid-template-columns:repeat(2,1fr);max-width:1080px;margin-inline:auto}.rv-two .rv-card{padding:30px 32px;gap:18px}.rv-two figcaption{margin-top:auto}.rv-two blockquote{font-size:17px;line-height:1.6}@media(max-width:800px){.rv-two{grid-template-columns:1fr}}</style><style id="rv-css2">.rv-slider{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none;padding:6px max(24px,calc((100vw - 1264px)/2)) 20px;-webkit-overflow-scrolling:touch}.rv-slider::-webkit-scrollbar{display:none}.rv-slider .rv-card{flex:none;width:440px;margin:0;padding:30px 32px;gap:18px}.rv-slider blockquote{font-size:16.5px;line-height:1.6}.rv-slider figcaption{margin-top:auto}@media(max-width:600px){.rv-slider .rv-card{width:84vw;padding:24px}}</style></head>
+<style id="rv-css">.rv-two{grid-template-columns:repeat(2,1fr);max-width:1080px;margin-inline:auto}.rv-two .rv-card{padding:30px 32px;gap:18px}.rv-two figcaption{margin-top:auto}.rv-two blockquote{font-size:17px;line-height:1.6}@media(max-width:800px){.rv-two{grid-template-columns:1fr}}</style><style id="rv-css2">.rv-slider{display:flex;gap:20px;overflow-x:auto;scrollbar-width:none;padding:6px max(24px,calc((100vw - 1264px)/2)) 20px;-webkit-overflow-scrolling:touch}.rv-slider::-webkit-scrollbar{display:none}.rv-slider .rv-card{flex:none;width:440px;margin:0;padding:30px 32px;gap:18px}.rv-slider blockquote{font-size:16.5px;line-height:1.6}.rv-slider figcaption{margin-top:auto}@media(max-width:600px){.rv-slider .rv-card{width:84vw;padding:24px}}</style><style id="pcx-css">
+.pcx{background:#E9EAED;border-top:1px solid #D7D9DD;padding:110px 0 120px;color:#0A0A0B}
+.pcx-head{display:flex;flex-direction:column;gap:14px;margin-bottom:56px}
+.pcx-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pcx-line{position:absolute;left:12%;right:12%;top:112px;height:2px;background:repeating-linear-gradient(90deg,rgba(5,96,222,.45) 0 8px,transparent 8px 16px);z-index:0;pointer-events:none}
+.pcx-card{position:relative;z-index:1;background:#fff;border:1px solid #DADCE1;border-radius:24px;padding:34px 32px 38px;display:flex;flex-direction:column;gap:14px;overflow:hidden;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s,border-color .3s}
+.pcx-card::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 100% 0,rgba(5,96,222,.12),transparent 60%);opacity:0;transition:opacity .45s}
+.pcx-card:hover{transform:translateY(-10px);border-color:#0560DE;box-shadow:0 26px 50px -22px rgba(5,96,222,.45)}
+.pcx-card:hover::before{opacity:1}
+.pcx-n{position:absolute;right:26px;top:22px;font-size:46px;font-weight:700;letter-spacing:-.02em;color:rgba(10,10,12,.07);transition:color .4s,transform .4s}
+.pcx-card:hover .pcx-n{color:rgba(5,96,222,.22);transform:scale(1.08)}
+.pcx-ico{position:relative;width:96px;height:96px;border-radius:26px;background:#F1F2F4;border:1px solid #E0E2E6;display:grid;place-items:center;color:#0A0A0B;margin-bottom:10px;transition:background .4s,color .4s,transform .5s cubic-bezier(.2,.7,.2,1),border-color .4s}
+.pcx-ico::after{content:"";position:absolute;inset:-9px;border-radius:34px;border:1.5px dashed rgba(5,96,222,.4);animation:pcxspin 7s linear infinite;opacity:.0;transition:opacity .4s}
+.pcx-ico svg{width:50px;height:50px;animation:pcxfloat 4.5s ease-in-out infinite}
+.pcx-card:nth-child(2) .pcx-ico svg{animation-delay:-1.5s}.pcx-card:nth-child(3) .pcx-ico svg{animation-delay:-3s}
+.pcx-card:hover .pcx-ico{background:#0560DE;color:#fff;border-color:#0560DE;transform:rotate(-4deg) scale(1.06)}
+.pcx-card:hover .pcx-ico svg [stroke="#0560DE"]{stroke:#fff}.pcx-card:hover .pcx-ico svg [fill="#0560DE"]{fill:#fff}
+.pcx-card:hover .pcx-ico::after{opacity:1}
+.pcx-tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#0560DE}
+.pcx-ttl{font-size:clamp(26px,2.4vw,34px)!important;line-height:1.1!important;margin:0;font-weight:700;letter-spacing:-.02em}
+.pcx-card p{font-size:16px;line-height:1.65;color:#4A4E57;margin:0}
+.pcx-bar{position:absolute;left:0;bottom:0;height:4px;width:100%;background:#0560DE;transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.pcx-card:hover .pcx-bar{transform:scaleX(1)}
+@keyframes pcxfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes pcxspin{to{transform:rotate(360deg)}}
+@media(max-width:900px){.pcx{padding:72px 0 80px}.pcx-grid{grid-template-columns:1fr}.pcx-line{display:none}.pcx-head{margin-bottom:36px}}
+@media(prefers-reduced-motion:reduce){.pcx-ico svg,.pcx-ico::after{animation:none}}
+</style></head>
 <body>
 
 <div id="top" class="disp-root js-on js-pin" style="font-family:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;background:#fff;color:#0A0A0B;overflow-x:clip;position:relative">
@@ -851,54 +878,7 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
   </section>
 
   <!-- ================= PROCESS (pinned horizontal) ================= -->
-  <section id="process" class="hproc" data-pin="" aria-label="Our process" style="--p: 0.0000;">
-    <div class="hp-stick">
-      <div class="hp-head"><div class="wrap">
-        <div style="display:flex;flex-direction:column;gap:14px">
-          <span class="lab mono">Our process</span>
-          <h2 class="h2">From first design to long-term support.</h2>
-        </div>
-      </div></div>
-
-      <div class="hp-track">
-        <article class="hp-panel">
-          <div class="hp-ico" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14V4h10M60 14V4H50M4 50v10h10M60 50v10H50" stroke="#0560DE"/><path d="M32 10l20 11v22L32 54 12 43V21z"/><path d="M32 10l20 11-20 11-20-11z" fill="#0560DE" fill-opacity=".16" stroke="#0560DE"/><path d="M32 32v22M12 21v22M52 21v22" opacity=".55"/></svg>
-          </div>
-          <div class="hp-copy">
-            <span class="hp-tag mono">Plan</span>
-            <h3 class="hp-ttl">Develop</h3>
-            <p class="hp-txt">We develop computer and audiovisual solutions around your space and the way your people and customers use it.</p>
-          </div>
-          <span class="hp-word" aria-hidden="true">Develop</span>
-        </article>
-        <article class="hp-panel">
-          <div class="hp-ico" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="52" height="34" rx="4"/><path d="M22 55h20M32 43v12"/><path d="M15 34l9-9 7 6 12-13 6 6" stroke="#0560DE"/><circle cx="49" cy="24" r="3.2" fill="#0560DE" stroke="#0560DE"/><circle cx="15" cy="34" r="2.4" fill="#fff" stroke="#0560DE"/></svg>
-          </div>
-          <div class="hp-copy">
-            <span class="hp-tag mono">Build</span>
-            <h3 class="hp-ttl">Installation</h3>
-            <p class="hp-txt">Our team carries out the installation and execution, drawing on the multiple installations we have completed across Europe.</p>
-          </div>
-          <span class="hp-word" aria-hidden="true">Install</span>
-        </article>
-        <article class="hp-panel">
-          <div class="hp-ico" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6l21 8v15c0 14-9 24-21 29C20 53 11 43 11 29V14z" fill="#0560DE" fill-opacity=".1"/><path d="M21 32l8 8 15-17" stroke="#0560DE" stroke-width="2.4"/><path d="M32 6l21 8v15c0 14-9 24-21 29" opacity=".0"/><path d="M58 22a28 28 0 0 1-3 22M6 42a28 28 0 0 1 3-22" opacity=".45"/></svg>
-          </div>
-          <div class="hp-copy">
-            <span class="hp-tag mono">Support</span>
-            <h3 class="hp-ttl">Maintenance</h3>
-            <p class="hp-txt">Once the systems are live we keep them running, with maintenance that makes us a long-term strategic and technological partner.</p>
-          </div>
-          <span class="hp-word" aria-hidden="true">Maintain</span>
-        </article>
-      </div>
-
-      <div class="hp-bar mono" aria-hidden="true"><span>Develop</span><div class="rail"><i></i><b></b></div><span>Maintenance</span></div>
-    </div>
-  </section>
+  <section id="process" class="pcx" aria-label="Our process"><div class="wrap"><div class="pcx-head reveal"><span class="lab mono">Our process</span><h2 class="h2">From first design to long-term support.</h2></div><div class="pcx-grid"><article class="pcx-card reveal" style="--d:0ms"><span class="pcx-n mono">01</span><div class="pcx-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14V4h10M60 14V4H50M4 50v10h10M60 50v10H50" stroke="#0560DE"/><path d="M32 10l20 11v22L32 54 12 43V21z"/><path d="M32 10l20 11-20 11-20-11z" fill="#0560DE" fill-opacity=".16" stroke="#0560DE"/><path d="M32 32v22M12 21v22M52 21v22" opacity=".55"/></svg></div><span class="pcx-tag mono">Plan</span><h3 class="pcx-ttl">Develop</h3><p>We develop computer and audiovisual solutions around your space and the way your people and customers use it.</p><span class="pcx-bar" aria-hidden="true"></span></article><article class="pcx-card reveal" style="--d:120ms"><span class="pcx-n mono">02</span><div class="pcx-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="52" height="34" rx="4"/><path d="M22 55h20M32 43v12"/><path d="M15 34l9-9 7 6 12-13 6 6" stroke="#0560DE"/><circle cx="49" cy="24" r="3.2" fill="#0560DE" stroke="#0560DE"/><circle cx="15" cy="34" r="2.4" fill="#fff" stroke="#0560DE"/></svg></div><span class="pcx-tag mono">Build</span><h3 class="pcx-ttl">Installation</h3><p>Our team carries out the installation and execution, drawing on the multiple installations we have completed across Europe.</p><span class="pcx-bar" aria-hidden="true"></span></article><article class="pcx-card reveal" style="--d:240ms"><span class="pcx-n mono">03</span><div class="pcx-ico" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M32 6l21 8v15c0 14-9 24-21 29C20 53 11 43 11 29V14z" fill="#0560DE" fill-opacity=".1"/><path d="M21 32l8 8 15-17" stroke="#0560DE" stroke-width="2.4"/><path d="M32 6l21 8v15c0 14-9 24-21 29" opacity=".0"/><path d="M58 22a28 28 0 0 1-3 22M6 42a28 28 0 0 1 3-22" opacity=".45"/></svg></div><span class="pcx-tag mono">Support</span><h3 class="pcx-ttl">Maintenance</h3><p>Once the systems are live we keep them running, with maintenance that makes us a long-term strategic and technological partner.</p><span class="pcx-bar" aria-hidden="true"></span></article><span class="pcx-line" aria-hidden="true"></span></div></div></section>
 
   <!-- ================= ABOUT ================= -->
   <section id="about" class="about">
