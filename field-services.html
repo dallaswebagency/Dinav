@@ -1228,6 +1228,16 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
 @media(max-width:900px){h1,.pp-h1,.h-h1{font-size:clamp(26px,7vw,32px)!important}section h2,.h2,.sv-cta h2{font-size:clamp(23px,6vw,28px)!important}.foot-top p.disp,.foot .big-t{font-size:clamp(20px,5.4vw,26px)!important}h3.hp-ttl{font-size:clamp(28px,8vw,38px)!important}}
 </style>
 
+<style id="foot-offices">
+.foot-offices{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;border-top:1px solid rgba(255,255,255,.18);padding-top:28px}
+.foot-off{display:flex;flex-direction:column;gap:10px}
+.foot-off .lab{font-size:12px;letter-spacing:.16em;color:#5AA2FF;margin-bottom:2px}
+.foot-off address{font-style:normal;color:var(--t2);line-height:1.6;font-size:15px}
+.foot-off a.fc{color:#fff;font-weight:600;font-size:clamp(15px,1.2vw,18px);letter-spacing:-.01em;overflow-wrap:anywhere;transition:color .2s}
+.foot-off a.fc:hover{color:#5AA2FF}
+.foot-off a.fm{color:var(--t2);font-size:14px;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){.foot-offices{grid-template-columns:1fr;gap:34px}}
+</style>
 </head>
 <body>
 
@@ -1378,15 +1388,20 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
             <a class="fchip" href="people-flow.html">People flow</a>
           </div>
         </div>
-        <div style="display:flex;flex-direction:column">
-          <a class="fbig" href="tel:+34917136955">
-            <span style="display:flex;flex-direction:column;gap:6px"><span class="mono" style="font-size:12px;letter-spacing:.16em;color:#5AA2FF">CALL US</span><span class="disp big-t" style="font-weight:700;font-size:clamp(26px,3vw,42px);letter-spacing:-.02em">(+34) 91 713 69 55</span></span>
-            <span class="arrow"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></span>
-          </a>
-          <a class="fbig" href="mailto:info@dinav.net">
-            <span style="display:flex;flex-direction:column;gap:6px"><span class="mono" style="font-size:12px;letter-spacing:.16em;color:#5AA2FF">EMAIL US</span><span class="disp big-t" style="font-weight:700;font-size:clamp(26px,3vw,42px);letter-spacing:-.02em">info@dinav.net</span></span>
-            <span class="arrow"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></span>
-          </a>
+        <div class="foot-offices">
+          <div class="foot-off">
+            <span class="mono lab">MADRID OFFICE (EUROPE)</span>
+            <address>Calle Marie Curie 5-7, Alpha Building<br>Floor 5, Office 5.2<br>28521 Rivas-Vaciamadrid (Madrid), Spain</address>
+            <a class="fc" href="tel:+34917136955">(+34) 91 713 69 55</a>
+            <a class="fc" href="mailto:info@dinav.net">info@dinav.net</a>
+            <a class="fm" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Marie+Curie+5+Rivas-Vaciamadrid" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
+          </div>
+          <div class="foot-off">
+            <span class="mono lab">UK OFFICE (DINAV UK SOLUTIONS)</span>
+            <address>Unit 18, Gunnels Wood Park<br>Gunnels Wood Road<br>Stevenage SG1 2BH, United Kingdom</address>
+            <a class="fc" href="tel:+447538275533">(+44) 7538 275533</a>
+            <a class="fc" href="mailto:richard.plaskow@dinav-uk.com">richard.plaskow@dinav-uk.com</a>
+          </div>
         </div>
       </div>
 
@@ -1423,21 +1438,6 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
           <a class="foot-link" href="privacy-policy.html">Privacy and data protection policy</a>
           <a class="foot-link" href="cookies-policy.html">Cookies Policy</a>
         </div>
-        <div style="display:flex;flex-direction:column;gap:2px">
-          <span class="mono" style="font-size:12px;letter-spacing:.18em;color:#5AA2FF;margin-bottom:14px">MADRID OFFICE (EUROPE)</span>
-          <p style="margin:0 0 14px;color:var(--t2);line-height:1.6;font-size:15px">Calle Marie Curie 5-7, Alpha Building<br>Floor 5, Office 5.2<br>28521 Rivas-Vaciamadrid (Madrid), Spain</p>
-          <a class="foot-link" href="tel:+34917136955">(+34) 91 713 69 55</a>
-          <a class="foot-link" href="mailto:info@dinav.net">info@dinav.net</a>
-          <a class="foot-link" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Marie+Curie+5+Rivas-Vaciamadrid" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
-          <span class="mono" style="font-size:12px;letter-spacing:.18em;color:#5AA2FF;margin:26px 0 14px">UK OFFICE (DINAV UK SOLUTIONS)</span>
-          <p style="margin:0 0 14px;color:var(--t2);line-height:1.6;font-size:15px">Unit 18, Gunnels Wood Park<br>Gunnels Wood Road<br>Stevenage SG1 2BH, United Kingdom</p>
-          <a class="foot-link" href="tel:+447538275533">(+44) 7538 275533</a>
-          <a class="foot-link" href="mailto:richard.plaskow@dinav-uk.com">richard.plaskow@dinav-uk.com</a>
-        </div>
-      </div>
-
-      <div style="margin-top:52px;padding-top:34px;border-top:1px solid rgba(255,255,255,.18);display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px">
-        <span class="mono" style="font-size:12px;letter-spacing:.18em;color:#5AA2FF;margin-right:10px">PROJECTS AND FIELD SUPPORT ACROSS 27 COUNTRIES</span>
       </div>
 
       <div style="margin-top:44px;padding:28px 0 36px;border-top:1px solid rgba(255,255,255,.18);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;font-size:14px;color:rgba(255,255,255,.72)">
