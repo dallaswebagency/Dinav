@@ -1238,6 +1238,22 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
 .foot-off a.fm{color:var(--t2);font-size:14px;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:600px){.foot-offices{grid-template-columns:1fr;gap:34px}}
 </style>
+<style id="nc-css">
+.nc{padding:84px 0;background:#fff}
+.nc-box{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:44px;align-items:center;border-radius:30px;padding:56px 52px;color:#fff;background:radial-gradient(70% 120% at 100% 0,rgba(43,138,255,.55),transparent 60%),linear-gradient(135deg,#0A1B3D,#0560DE 140%);position:relative;overflow:hidden}
+.nc-box::after{content:"";position:absolute;right:-90px;bottom:-110px;width:320px;height:320px;border-radius:50%;border:1.5px solid rgba(255,255,255,.18);box-shadow:0 0 0 38px rgba(255,255,255,.05),0 0 0 76px rgba(255,255,255,.03);pointer-events:none}
+.nc-l{display:flex;flex-direction:column;gap:16px;position:relative;z-index:1}
+.nc-l .lab{color:#9CC8FF}.nc-l h2{color:#fff;max-width:18ch}.nc-l p{font-size:18px;line-height:1.55;color:rgba(255,255,255,.86);margin:0}
+.nc-btns{margin-top:10px}.nc .btn-white{background:#fff;color:#0A0A0B}.nc .btn-white:hover{background:#0A0A0B;color:#fff}
+.nc-r{display:flex;flex-direction:column;gap:12px;position:relative;z-index:1}
+.nc-c{display:flex;align-items:center;gap:16px;padding:16px 20px;border-radius:18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px);color:#fff;transition:background .25s,transform .35s var(--ease)}
+.nc-c:hover{background:rgba(255,255,255,.18);transform:translateX(4px)}
+.nc-c i{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#0560DE;flex:none}
+.nc-c span{display:flex;flex-direction:column;gap:3px;min-width:0}
+.nc-c small{font-size:11px;letter-spacing:.16em;color:#9CC8FF}
+.nc-c b{font-size:17px;font-weight:600;letter-spacing:-.01em;overflow-wrap:anywhere}
+@media(max-width:900px){.nc{padding:56px 0}.nc-box{grid-template-columns:1fr;padding:38px 26px;border-radius:24px}}
+</style>
 </head>
 <body>
 
@@ -1382,12 +1398,7 @@ h3.hp-ttl{font-size:clamp(32px,3.6vw,52px)!important;line-height:1.05!important}
   <section class="pg-sec" aria-label="Our solutions">
     <div class="wrap"><div class="pg-ph reveal"><div><span class="lab mono">Our solutions</span><h2 class="h2" style="margin-top:18px">Three ways we help.</h2></div></div><div class="ab-cards"><a class="ab-card reveal" href="it-networking.html"><div class="im"><img src="assets/img/2022-09-informatica-y-redes_dinav-solutions-10-10.webp" alt="IT and networking" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><div class="tx"><h3>IT and networking</h3><p>Networks, cabling, voice and security designed, installed and maintained as one working system.</p><span class="go">Read more &rarr;</span></div></a><a class="ab-card reveal" href="audiovisual.html"><div class="im"><img src="assets/img/2022-03-dinav_audiovisuales4-10.webp" alt="Audiovisual systems" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><div class="tx"><h3>Audiovisual systems</h3><p>Display, sound and control systems installed for offices, retail, transport and public spaces.</p><span class="go">Read more &rarr;</span></div></a><a class="ab-card reveal" href="people-flow.html"><div class="im"><img src="assets/img/2022-09-pantalla-tactil_dinav-solutions_2-10.webp" alt="People-flow and queue management" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><div class="tx"><h3>People-flow and queue management</h3><p>Queue, checkout and fitting-room systems that keep customers moving, installed and supported on site.</p><span class="go">Read more &rarr;</span></div></a></div></div>
   </section>
-  <section class="sv-cta" aria-label="Contact">
-    <div class="wrap sv-cta-in">
-      <h2>Need more information?</h2>
-      <a class="btn btn-white" href="contact.html">Contact us <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></a>
-    </div>
-  </section>
+  <section class="nc" aria-label="Contact"><div class="wrap"><div class="nc-box reveal"><div class="nc-l"><span class="lab mono">Contact</span><h2>Need more information?</h2><p>Tell us about your project.</p><div class="nc-btns"><a class="btn btn-white" href="contact.html">Contact us <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5"></path></svg></a></div></div><div class="nc-r"><a class="nc-c" href="tel:+34917136955"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></i><span><small class="mono">MADRID OFFICE (EUROPE)</small><b>(+34) 91 713 69 55</b></span></a><a class="nc-c" href="tel:+447538275533"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></i><span><small class="mono">UK OFFICE</small><b>(+44) 7538 275533</b></span></a><a class="nc-c" href="mailto:info@dinav.net"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i><span><small class="mono">EMAIL</small><b>info@dinav.net</b></span></a></div></div></div></section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="foot">
